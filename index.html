@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Krishna Sharma | Portfolio</title>
+  <meta name="description" content="Personal portfolio of Krishna Sharma - Computer Science (AI & ML) Engineer. Custom Neo-Brutalist Bento Grid layout showcasing AI pipelines, backend telemetry, and stats.">
+  
+  <!-- Preconnect and pull Google Fonts (Space Grotesk & JetBrains Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Top Brutalist Navbar -->
+  <nav class="brutalist-nav">
+    <div class="nav-brand">KRISHNA SHARMA</div>
+    <div class="nav-status">
+      <span class="status-dot"></span>
+      <span class="status-text">SYSTEM: ACTIVE</span>
+    </div>
+    <div class="nav-links">
+      <a href="https://github.com/itsksfit" target="_blank" rel="noopener" class="nav-link">GITHUB</a>
+      <a href="https://www.linkedin.com/in/krishnasharmx/" target="_blank" rel="noopener" class="nav-link">LINKEDIN</a>
+      <a href="https://leetcode.com/u/krishnxsharmx/" target="_blank" rel="noopener" class="nav-link">LEETCODE</a>
+      <a href="https://www.youtube.com/@Itsksfit" target="_blank" rel="noopener" class="nav-link">YOUTUBE</a>
+      <a href="https://www.instagram.com/krishnxsharmx/" target="_blank" rel="noopener" class="nav-link">INSTAGRAM</a>
+      <a href="mailto:ks1445674@gmail.com" class="nav-link cta-link">CONTACT</a>
+    </div>
+  </nav>
+
+  <main class="portfolio-container">
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-tag">// CS UNDERGRADUATE (AI & ML)</div>
+        <h1 class="hero-title">
+          KRISHNA<br>SHARMA
+        </h1>
+        <p class="hero-subtitle">
+          BUILDING INTELLIGENT AI AGENTS, AUTOMATED MARKETING PIPELINES, AND HIGH-PERFORMANCE BACKEND SYSTEMS.
+        </p>
+        <div class="hero-actions">
+          <a href="mailto:ks1445674@gmail.com" class="brutalist-btn primary">
+            GET IN TOUCH
+            <span class="btn-arrow">→</span>
+          </a>
+          <a href="https://github.com/itsksfit" target="_blank" rel="noopener" class="brutalist-btn secondary">
+            VIEW GITHUB
+          </a>
+        </div>
+      </div>
+      <div class="hero-portrait-wrapper">
+        <div class="portrait-shadow-box">
+          <div class="portrait-border-box">
+            <img src="profile.png" alt="Krishna Sharma Portrait" class="portrait-img">
+            <!-- Retro scanline overlay specifically for the portrait -->
+            <div class="portrait-overlay"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENTO GRID SHOWCASE -->
+    <section class="bento-section" id="projects">
+      <div class="bento-grid">
+        <!-- CARD 6: BIO SUMMARY -->
+        <div class="bento-card bio-card span-6">
+          <div class="card-header">
+            <div class="header-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="header-title">bio_summary.md</div>
+          </div>
+          <div class="card-body bio-body">
+            <p class="bio-text">
+              Computer Science (AI & ML) undergraduate and lifestyle/fun content creator building intelligent, practical software solutions. Passionate about machine learning pipelines, content automation, and backend engineering architectures.
+            </p>
+            <p class="bio-text" style="margin-top: 12px;">
+              Currently serving as <strong>Club Head of the Cloud Computing Club</strong> at the Galgotias Tech Council, coordinating technical workshops and community building.
+            </p>
+          </div>
+        </div>
+
+        <!-- CARD 7: KEY ACHIEVEMENTS -->
+        <div class="bento-card achievements-card span-6">
+          <div class="card-header">
+            <div class="header-title">achievements.json</div>
+          </div>
+          <div class="card-body achievements-body">
+            <ul class="achievements-list">
+              <li>
+                <span class="achievement-metric">40%+</span>
+                <span class="achievement-text">Student participation increase at tech workshops.</span>
+              </li>
+              <li>
+                <span class="achievement-metric">90%</span>
+                <span class="achievement-text">Research time reduction via automated ContentFlow AI multi-agent sweep.</span>
+              </li>
+              <li>
+                <span class="achievement-metric">100%</span>
+                <span class="achievement-text">Operational cost cut achieved by utilizing local models and cached API routes.</span>
+              </li>
+              <li>
+                <span class="achievement-metric">8.0</span>
+                <span class="achievement-text">Academic CGPA maintained in B.Tech Computer Science (AI & ML) syllabus.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- CARD 1: CURRENT STACK CODE BLOCK -->
+        <div class="bento-card current-stack-card span-7" id="skills">
+          <div class="card-header">
+            <div class="header-dots">
+              <span class="dot red"></span>
+              <span class="dot yellow"></span>
+              <span class="dot green"></span>
+            </div>
+            <div class="header-title">skills.js</div>
+          </div>
+          <div class="card-body code-body">
+            <pre class="code-area"><code id="typing-code"></code></pre>
+          </div>
+        </div>
+
+        <!-- CARD 2: FEATURED SYSTEM -->
+        <div class="bento-card system-card span-5">
+          <div class="card-header">
+            <div class="system-tab-headers">
+              <button class="system-tab active" id="tab-contentflow">ContentFlow AI</button>
+              <button class="system-tab" id="tab-automarketer">AutoMarketer AI</button>
+            </div>
+            <span class="status-indicator" style="margin-left: auto;">
+              <span class="status-dot pulsing" style="background-color: var(--accent-blue);"></span> RUNNING
+            </span>
+          </div>
+          <div class="card-body system-body">
+            <div class="system-monitor-box">
+              <div class="system-logs" id="pipeline-logs">Initializing simulation engine...</div>
+            </div>
+
+            <!-- Interactive Architecture Flow Map -->
+            <div class="system-flow-container" id="system-flow-map">
+              <!-- Nodes populated dynamically by app.js -->
+            </div>
+
+            <div class="system-info">
+              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                <h3 class="system-title" id="system-title" style="margin: 0;">ContentFlow AI</h3>
+                <a href="https://content-flow-ai-lemon.vercel.app/" id="system-link" target="_blank" rel="noopener" class="system-demo-link">LIVE DEMO ↗</a>
+              </div>
+              <p class="system-desc" id="system-desc">A 4-agent AI pipeline automating content research, script writing, and viral hook creation via trend telemetry analysis.</p>
+              <div class="system-tech-tags" id="system-tech-tags">
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>NLP</span>
+                <span>Reddit API</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 3: LIVE GITHUB METRICS -->
+        <div class="bento-card github-card span-6">
+          <div class="card-header">
+            <div class="header-title">LIVE TELEMETRY / COMMIT TRACKER</div>
+          </div>
+          <div class="card-body github-body">
+            <div class="git-stats-row">
+              <div class="git-stat">
+                <span class="git-stat-val">10</span>
+                <span class="git-stat-lbl">Active Repos</span>
+              </div>
+              <div class="git-stat">
+                <span class="git-stat-val" id="commit-counter">73</span>
+                <span class="git-stat-lbl">Commits (2026)</span>
+              </div>
+            </div>
+
+            <div class="git-repos-list">
+              <a href="https://github.com/itsksfit/ContentFlow-AI" target="_blank" rel="noopener" class="git-repo-item">
+                <span class="repo-name">ContentFlow-AI</span>
+                <span class="repo-lang py">Python</span>
+                <span class="repo-desc">4-agent content automation research & script engine.</span>
+              </a>
+              <a href="https://github.com/itsksfit/AutoMarketer-AI" target="_blank" rel="noopener" class="git-repo-item">
+                <span class="repo-name">AutoMarketer-AI</span>
+                <span class="repo-lang py">Python</span>
+                <span class="repo-desc">LLaMA 3.3 marketing campaign scraper & FLUX.1 generator.</span>
+              </a>
+              <a href="https://github.com/itsksfit/Shell-Automation" target="_blank" rel="noopener" class="git-repo-item">
+                <span class="repo-name">Shell-Automation</span>
+                <span class="repo-lang sh">Shell</span>
+                <span class="repo-desc">Shell scripts for automation & workspace config.</span>
+              </a>
+              <a href="https://github.com/itsksfit/Cloud_platform" target="_blank" rel="noopener" class="git-repo-item">
+                <span class="repo-name">Cloud_platform</span>
+                <span class="repo-lang java">Java</span>
+                <span class="repo-desc">Cloud Computing Management Dashboard Platform.</span>
+              </a>
+            </div>
+
+            <div class="git-chart-header">
+              <span>CONTRIBUTIONS TELEMETRY</span>
+              <span class="pulse-indicator"><span class="pulse-dot"></span> LIVE SYNC</span>
+            </div>
+            <div class="git-commit-grid" id="commit-grid">
+              <!-- Grid blocks will be populated dynamically -->
+            </div>
+          </div>
+        </div>
+
+        <!-- CARD 4: STATS PROJECTS -->
+        <div class="bento-card stat-card span-3">
+          <div class="card-body stat-body">
+            <div class="stat-number"><span class="counter" data-target="2">0</span></div>
+            <div class="stat-label">AI PROJECTS DEPLOYED</div>
+          </div>
+        </div>
+
+        <!-- CARD 5: STATS CERTIFICATIONS -->
+        <div class="bento-card stat-card span-3">
+          <div class="card-body stat-body">
+            <div class="stat-number"><span class="counter" data-target="20">0</span>+</div>
+            <div class="stat-label">CERTIFICATIONS ACQUIRED</div>
+          </div>
+        </div>
+
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Contact Info Line -->
+  <div class="contact-details-bar">
+    <span>EMAIL: ks1445674@gmail.com</span>
+    <span>PHONE: +91 9953870953</span>
+    <span>LEETCODE: krishnxsharmx</span>
+    <span>LOC: DELHI, INDIA</span>
+  </div>
+
+  <!-- INFINITE MARQUEE BANNER -->
+  <footer class="marquee-footer">
+    <div class="marquee-track">
+      <div class="marquee-content">
+        C++ &bull; JAVA &bull; PYTHON &bull; MACHINE LEARNING &bull; NLP &bull; GENERATIVE AI &bull; RAG &bull; LANGGRAPH &bull; FASTAPI &bull; LANGCHAIN &bull; MONGODB &bull; MYSQL &bull; LINUX &bull; CLOUD COMPUTING &bull; CONTENT CREATION &bull; INSTAGRAM &bull; C++ &bull; JAVA &bull; PYTHON &bull; MACHINE LEARNING &bull; NLP &bull; GENERATIVE AI &bull; RAG &bull; LANGGRAPH &bull; FASTAPI &bull; LANGCHAIN &bull; MONGODB &bull; MYSQL &bull; LINUX &bull; CLOUD COMPUTING &bull; CONTENT CREATION &bull; INSTAGRAM &bull;
+      </div>
+      <div class="marquee-content" aria-hidden="true">
+        C++ &bull; JAVA &bull; PYTHON &bull; MACHINE LEARNING &bull; NLP &bull; GENERATIVE AI &bull; RAG &bull; LANGGRAPH &bull; FASTAPI &bull; LANGCHAIN &bull; MONGODB &bull; MYSQL &bull; LINUX &bull; CLOUD COMPUTING &bull; CONTENT CREATION &bull; INSTAGRAM &bull; C++ &bull; JAVA &bull; PYTHON &bull; MACHINE LEARNING &bull; NLP &bull; GENERATIVE AI &bull; RAG &bull; LANGGRAPH &bull; FASTAPI &bull; LANGCHAIN &bull; MONGODB &bull; MYSQL &bull; LINUX &bull; CLOUD COMPUTING &bull; CONTENT CREATION &bull; INSTAGRAM &bull;
+      </div>
+    </div>
+  </footer>
+
+  <!-- NEO-BRUTALIST CONTACT MODAL Overlay -->
+  <div class="contact-modal-overlay" id="contact-modal">
+    <div class="contact-modal-window">
+      <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px;">
+        <div class="header-dots" style="margin: 0;">
+          <span class="dot red" id="close-modal-dot-red" style="cursor: pointer;"></span>
+          <span class="dot yellow"></span>
+          <span class="dot green"></span>
+        </div>
+        <div class="header-title" style="margin-left: 10px;">contact_session.sh</div>
+        <button class="close-modal-btn" id="close-modal-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <h2 class="modal-title">INBOUND CONNECTION PROMPT</h2>
+        <p class="modal-subtitle">Choose a transmission protocol to get in touch.</p>
+        
+        <div class="modal-protocols">
+          <!-- Protocol 1: Quick Copy Email -->
+          <div class="protocol-card" id="btn-copy-email">
+            <span class="protocol-icon">✉️</span>
+            <div class="protocol-info">
+              <span class="protocol-lbl">EMAIL</span>
+              <span class="protocol-val">ks1445674@gmail.com</span>
+            </div>
+            <span class="protocol-action" id="copy-action-lbl">COPY</span>
+          </div>
+
+          <!-- Protocol 2: Call Direct -->
+          <a href="tel:+919953870953" class="protocol-card">
+            <span class="protocol-icon">📞</span>
+            <div class="protocol-info">
+              <span class="protocol-lbl">TELEPHONY</span>
+              <span class="protocol-val">+91 9953870953</span>
+            </div>
+            <span class="protocol-action">CALL</span>
+          </a>
+
+          <!-- Protocol 3: LinkedIn Connect -->
+          <a href="https://www.linkedin.com/in/krishnasharmx/" target="_blank" rel="noopener" class="protocol-card">
+            <span class="protocol-icon">🔗</span>
+            <div class="protocol-info">
+              <span class="protocol-lbl">LINKEDIN</span>
+              <span class="protocol-val">in/krishnasharmx</span>
+            </div>
+            <span class="protocol-action">CONNECT</span>
+          </a>
+
+          <!-- Protocol 4: Instagram Follow -->
+          <a href="https://www.instagram.com/krishnxsharmx/" target="_blank" rel="noopener" class="protocol-card">
+            <span class="protocol-icon">📸</span>
+            <div class="protocol-info">
+              <span class="protocol-lbl">INSTAGRAM</span>
+              <span class="protocol-val">@krishnxsharmx</span>
+            </div>
+            <span class="protocol-action">FOLLOW</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
