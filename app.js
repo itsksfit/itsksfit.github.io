@@ -96,6 +96,49 @@ function startStackTyping() {
   }, 8);
 }
 
+// Populate and animate GitHub Commit Matrix Grid
+function initGithubCommitGrid() {
+  const grid = document.getElementById("commit-grid");
+  if (!grid) return;
+
+  grid.innerHTML = "";
+  const totalBlocks = 72; // 18 columns * 4 rows
+  const blocks = [];
+
+  // Generate blocks with initial commit distributions
+  for (let i = 0; i < totalBlocks; i++) {
+    const block = document.createElement("div");
+    block.className = "commit-block";
+    
+    // Weighted distribution
+    const rand = Math.random();
+    let level = 0;
+    if (rand > 0.45 && rand <= 0.75) level = 1;
+    else if (rand > 0.75 && rand <= 0.90) level = 2;
+    else if (rand > 0.90 && rand <= 0.97) level = 3;
+    else if (rand > 0.97) level = 4;
+
+    block.classList.add(`level-${level}`);
+    grid.appendChild(block);
+    blocks.push({ element: block, baseLevel: level });
+  }
+
+  // Periodic Git telemetry highlight simulation
+  setInterval(() => {
+    // Select 3 random blocks to flash/increase activity
+    for (let k = 0; k < 3; k++) {
+      const idx = Math.floor(Math.random() * totalBlocks);
+      const block = blocks[idx];
+      if (!block) continue;
+      
+      block.element.className = "commit-block level-4";
+      
+      setTimeout(() => {
+        block.element.className = `commit-block level-${block.baseLevel}`;
+      }, 1000 + Math.random() * 2000);
+    }
+  }, 4000);
+}
 
 // Live Commit Counter Incrementer
 function startCommitCounter() {
@@ -345,8 +388,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // Start Stack Typer
   startStackTyping();
 
-
-
+  // Load and animate Github Grid
+  initGithubCommitGrid();
   // Start telemetry counter ticks
   startCommitCounter();
 
