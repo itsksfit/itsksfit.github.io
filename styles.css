@@ -2040,12 +2040,12 @@ body {
 }
 
 /* ==========================================================================
-   PRINT STYLES FOR RESUME (Exact 1-Page ATS Standard Format)
+   PRINT STYLES FOR RESUME (Exact 1-Page Full ATS Layout)
    ========================================================================== */
 
 @page {
   size: A4 portrait;
-  margin: 6mm 10mm 6mm 10mm;
+  margin: 10mm 14mm 10mm 14mm;
 }
 
 @media print {
@@ -2060,8 +2060,8 @@ body {
     background: #ffffff !important;
     color: #000000 !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    font-size: 8.2pt !important;
-    line-height: 1.25 !important;
+    font-size: 9.3pt !important;
+    line-height: 1.34 !important;
     padding: 0 !important;
     margin: 0 !important;
     width: 100% !important;
@@ -2122,23 +2122,23 @@ body {
     overflow: visible !important;
     max-height: none !important;
     height: auto !important;
-    line-height: 1.25 !important;
+    line-height: 1.34 !important;
   }
 
   /* Resume Header */
   .resume-doc-header {
     text-align: center !important;
     padding-bottom: 2px !important;
-    margin-bottom: 4px !important;
+    margin-bottom: 6px !important;
     border-bottom: none !important;
   }
 
   .res-doc-name {
-    font-size: 15.5pt !important;
+    font-size: 18pt !important;
     font-weight: 800 !important;
-    letter-spacing: 0.04em !important;
+    letter-spacing: 0.03em !important;
     color: #000000 !important;
-    margin: 0 0 1px 0 !important;
+    margin: 0 0 2px 0 !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   }
 
@@ -2147,8 +2147,8 @@ body {
     flex-wrap: wrap !important;
     justify-content: center !important;
     align-items: center !important;
-    gap: 3px !important;
-    font-size: 8pt !important;
+    gap: 4px !important;
+    font-size: 8.8pt !important;
     color: #000000 !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
     margin: 0 !important;
@@ -2163,40 +2163,40 @@ body {
   .res-doc-contacts .sep {
     color: #000000 !important;
     font-weight: normal !important;
-    margin: 0 2px !important;
+    margin: 0 3px !important;
   }
 
   .res-doc-location {
-    font-size: 8pt !important;
+    font-size: 8.8pt !important;
     color: #000000 !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    margin-top: 1px !important;
+    margin-top: 2px !important;
   }
 
   /* Resume Sections */
   .resume-doc-section {
-    margin-bottom: 4px !important;
+    margin-bottom: 7px !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
   }
 
   .res-doc-heading {
-    font-size: 9pt !important;
+    font-size: 10pt !important;
     font-weight: 800 !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    letter-spacing: 0.03em !important;
+    letter-spacing: 0.04em !important;
     color: #000000 !important;
-    border-bottom: 1px solid #000000 !important;
-    padding-bottom: 1px !important;
-    margin-top: 4px !important;
-    margin-bottom: 2.5px !important;
+    border-bottom: 1.2pt solid #000000 !important;
+    padding-bottom: 1.5px !important;
+    margin-top: 6px !important;
+    margin-bottom: 3.5px !important;
     text-transform: uppercase !important;
   }
 
   .res-doc-paragraph {
-    font-size: 8.0pt !important;
+    font-size: 8.9pt !important;
     color: #000000 !important;
-    line-height: 1.24 !important;
+    line-height: 1.34 !important;
     text-align: justify !important;
     margin: 0 !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
@@ -2204,7 +2204,7 @@ body {
 
   /* Entries */
   .res-entry {
-    margin-bottom: 3.5px !important;
+    margin-bottom: 5px !important;
     page-break-inside: avoid !important;
     break-inside: avoid !important;
   }
@@ -2213,18 +2213,18 @@ body {
     display: flex !important;
     justify-content: space-between !important;
     align-items: baseline !important;
-    margin-bottom: 0px !important;
+    margin-bottom: 1px !important;
   }
 
   .res-org {
-    font-size: 8.4pt !important;
+    font-size: 9.3pt !important;
     font-weight: 700 !important;
     color: #000000 !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   }
 
   .res-loc-date {
-    font-size: 8.1pt !important;
+    font-size: 9pt !important;
     font-style: normal !important;
     color: #000000 !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
@@ -2232,19 +2232,19 @@ body {
   }
 
   .res-entry-sub {
-    font-size: 8.0pt !important;
+    font-size: 8.9pt !important;
     color: #000000 !important;
     margin-top: 0px !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   }
 
   .res-tech-stack {
-    font-size: 7.9pt !important;
+    font-size: 8.6pt !important;
     color: #000000 !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
-    margin-top: 1px !important;
-    margin-bottom: 1.5px !important;
-    line-height: 1.18 !important;
+    margin-top: 1.5px !important;
+    margin-bottom: 2.5px !important;
+    line-height: 1.25 !important;
   }
 
   .res-tech-stack em {
@@ -2259,18 +2259,18 @@ body {
   /* Bullets */
   .res-bullets-list {
     list-style-type: disc !important;
-    margin: 1.5px 0 0 0 !important;
-    padding-left: 13px !important;
+    margin: 2px 0 0 0 !important;
+    padding-left: 15px !important;
   }
 
   .res-bullets-list li {
     position: static !important;
     padding-left: 0 !important;
-    font-size: 7.9pt !important;
-    line-height: 1.22 !important;
+    font-size: 8.8pt !important;
+    line-height: 1.32 !important;
     color: #000000 !important;
-    margin-bottom: 1.5px !important;
-    text-align: left !important;
+    margin-bottom: 2.5px !important;
+    text-align: justify !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   }
 
@@ -2287,35 +2287,35 @@ body {
   .res-skills-table {
     display: flex !important;
     flex-direction: column !important;
-    gap: 1.2px !important;
-    margin-top: 1.5px !important;
+    gap: 2px !important;
+    margin-top: 2px !important;
   }
 
   .skill-row {
     display: grid !important;
-    grid-template-columns: 108px 1fr !important;
-    gap: 4px !important;
-    font-size: 7.9pt !important;
-    line-height: 1.20 !important;
+    grid-template-columns: 120px 1fr !important;
+    gap: 6px !important;
+    font-size: 8.8pt !important;
+    line-height: 1.30 !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   }
 
   .skill-lbl {
     font-weight: 700 !important;
     color: #000000 !important;
-    font-size: 7.9pt !important;
+    font-size: 8.8pt !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   }
 
   .skill-val {
     color: #000000 !important;
-    font-size: 7.9pt !important;
+    font-size: 8.8pt !important;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
   }
 
   .float-right {
     float: right !important;
-    font-size: 7.9pt !important;
+    font-size: 8.8pt !important;
     font-style: normal !important;
     color: #000000 !important;
     font-weight: normal !important;

@@ -660,15 +660,117 @@
         </div>
       </div>
 
-      <div class="resume-pdf-container">
-        <object data="resume.pdf" type="application/pdf" class="resume-pdf-iframe" id="resume-pdf-frame">
-          <iframe src="resume.pdf" class="resume-pdf-iframe" title="Krishna Sharma Resume">
-            <div class="pdf-fallback-box">
-              <p>Your browser does not support inline PDF viewing.</p>
-              <a href="resume.pdf" target="_blank" class="btn-glow-primary">Open Resume PDF</a>
+      <div class="modal-scroll-body" id="resume-document">
+        <!-- Resume Header -->
+        <header class="resume-doc-header">
+          <h1 class="res-doc-name">KRISHNA SHARMA</h1>
+          <div class="res-doc-contacts">
+            <a href="mailto:ks1445674@gmail.com">ks1445674@gmail.com</a>
+            <span class="sep">|</span>
+            <a href="tel:+919953870953">+91 9953870953</a>
+            <span class="sep">|</span>
+            <a href="https://linkedin.com/in/krishnasharmx" target="_blank" rel="noopener">linkedin.com/in/krishnasharmx</a>
+            <span class="sep">|</span>
+            <a href="https://github.com/itsksfit" target="_blank" rel="noopener">github.com/itsksfit</a>
+            <span class="sep">|</span>
+            <a href="https://itsksfit.github.io" target="_blank" rel="noopener">itsksfit.github.io</a>
+          </div>
+          <div class="res-doc-location">Delhi, India</div>
+        </header>
+
+        <!-- Section: Summary -->
+        <section class="resume-doc-section">
+          <h2 class="res-doc-heading">SUMMARY</h2>
+          <p class="res-doc-paragraph">
+            AI/ML undergraduate who has shipped two production-deployed, full-stack AI platforms (FastAPI + LLM APIs) that cut manual workflow time by up to 90%. Strong foundation in backend development, NLP, and Generative AI, with hands-on experience across the stack from API design to deployment. Former Club Head of the Cloud Computing Club at Galgotias Tech Council, growing technical community engagement by 40%+. Seeking SDE / AI/ML internship opportunities.
+          </p>
+        </section>
+
+        <!-- Section: Education -->
+        <section class="resume-doc-section">
+          <h2 class="res-doc-heading">EDUCATION</h2>
+          <div class="res-entry">
+            <div class="res-entry-head">
+              <span class="res-org">Galgotias University, Greater Noida, Uttar Pradesh</span>
+              <span class="res-loc-date">2024 - 2028</span>
             </div>
-          </iframe>
-        </object>
+            <div class="res-entry-sub">
+              B.Tech in Computer Science and Engineering (AI &amp; ML) | CGPA: 8.0
+            </div>
+          </div>
+        </section>
+
+        <!-- Section: Projects -->
+        <section class="resume-doc-section">
+          <h2 class="res-doc-heading">PROJECTS</h2>
+          
+          <!-- Project 1 -->
+          <div class="res-entry">
+            <div class="res-entry-head">
+              <span class="res-org">SentinelChain - Autonomous Supply Chain Resilience Platform</span>
+              <span class="res-loc-date">Jul - Aug 2026</span>
+            </div>
+            <div class="res-tech-stack">
+              <em>Next.js, React, Tailwind CSS, Three.js, Groq API, SAP S/4HANA, SAP Ariba, NewsAPI</em> | <a href="https://github.com/itsksfit/SentinelChain_SAP" target="_blank" rel="noopener">GitHub</a> (<a href="https://sentinelchain-gilt.vercel.app/" target="_blank" rel="noopener">Live</a>)
+            </div>
+            <ul class="res-bullets-list">
+              <li>Architected a multi-agent GenAI pipeline (Detection, Impact, Match &amp; Chase, Execution) that autonomously detects semiconductor supply-chain disruptions and drafts procurement responses, compressing a 2-week manual resolution process to under 2 minutes.</li>
+              <li>Connected SAP S/4HANA Cloud OData APIs to explode Bills of Materials in real time, calculating exact dollar-level revenue-at-risk (e.g., $14.2M/day exposure on a single disrupted line) across multiple plants and product lines.</li>
+              <li>Built a live sourcing engine against the Mouser Electronics API with zero hardcoded data, enforcing enterprise guardrails (&plusmn;10% price ceiling, 95% evidence-confidence gate) before auto-generating SAP Ariba purchase requisitions.</li>
+            </ul>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="res-entry">
+            <div class="res-entry-head">
+              <span class="res-org">ContentFlow AI</span>
+              <span class="res-loc-date">Mar - May 2026</span>
+            </div>
+            <div class="res-tech-stack">
+              <em>Python, FastAPI, NLP, JavaScript, Reddit API, yt-dlp</em> | <a href="https://github.com/itsksfit/ContentFlow-AI" target="_blank" rel="noopener">GitHub</a> (<a href="https://content-flow-ai-lemon.vercel.app/" target="_blank" rel="noopener">Live</a>)
+            </div>
+            <ul class="res-bullets-list">
+              <li>Designed a 4-agent AI pipeline automating content discovery, trend validation, script generation, and viral hook creation using real-time Reddit and YouTube data, cutting manual research time by 90% and scripting effort by 85%.</li>
+              <li>Built an NLP-powered Hinglish content generation engine with weighted engagement scoring and competitor analysis, improving content selection accuracy by 70% and generating creator-ready scripts in under 10 seconds.</li>
+              <li>Built and deployed scalable REST APIs (FastAPI) with frontend/backend on Vercel and Render, removing dependency on external LLM APIs and cutting operational costs by 100%.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- Section: Technical Skills -->
+        <section class="resume-doc-section">
+          <h2 class="res-doc-heading">TECHNICAL SKILLS</h2>
+          <div class="res-skills-table">
+            <div class="skill-row"><span class="skill-lbl">Languages:</span> <span class="skill-val">C++, Java, Python</span></div>
+            <div class="skill-row"><span class="skill-lbl">AI / ML:</span> <span class="skill-val">Generative AI, Machine Learning, NLP, Prompt Engineering, RAG, LangChain</span></div>
+            <div class="skill-row"><span class="skill-lbl">Backend:</span> <span class="skill-val">FastAPI, Django, REST APIs, API Integration, JDBC, Servlets</span></div>
+            <div class="skill-row"><span class="skill-lbl">Frontend:</span> <span class="skill-val">HTML, CSS, JavaScript</span></div>
+            <div class="skill-row"><span class="skill-lbl">Databases:</span> <span class="skill-val">MongoDB, MySQL</span></div>
+            <div class="skill-row"><span class="skill-lbl">Tools &amp; Platforms:</span> <span class="skill-val">Git, GitHub, Linux, VS Code, Apache Tomcat, Vercel, Render, SolidWorks</span></div>
+            <div class="skill-row"><span class="skill-lbl">CS Fundamentals:</span> <span class="skill-val">DSA, OOP, DBMS, Operating Systems, Computer Networks</span></div>
+          </div>
+        </section>
+
+        <!-- Section: Certifications -->
+        <section class="resume-doc-section">
+          <h2 class="res-doc-heading">CERTIFICATIONS</h2>
+          <ul class="res-bullets-list">
+            <li><strong>Oracle Database SQL</strong> - Oracle Academy <span class="float-right">Nov 2025</span></li>
+            <li><strong>Programming with Java</strong> - GUVI (HCL) <span class="float-right">Aug 2025</span></li>
+            <li><strong>Cloud Computing Fundamentals</strong> - Infosys Springboard <span class="float-right">Sep 2025</span></li>
+            <li><strong>Design Thinking</strong> - NPTEL <span class="float-right">Jan 2026</span></li>
+          </ul>
+        </section>
+
+        <!-- Section: Leadership & Achievements -->
+        <section class="resume-doc-section">
+          <h2 class="res-doc-heading">LEADERSHIP &amp; ACHIEVEMENTS</h2>
+          <ul class="res-bullets-list">
+            <li><strong>Former Club Head, Cloud Computing Club - Galgotias Tech Council:</strong> drove 40%+ growth in technical community engagement through cloud workshops and open-source bootcamps.</li>
+            <li><strong>Infrastructure Optimization:</strong> engineered zero-cost local LLM deployment pipelines for active full-stack applications.</li>
+            <li><strong>Open Source &amp; Problem Solving:</strong> maintained an active, production-backed GitHub footprint alongside consistent algorithmic practice on LeetCode.</li>
+          </ul>
+        </section>
       </div>
     </div>
   </div>
