@@ -3,74 +3,127 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Krishna Sharma | Portfolio</title>
-  <meta name="description" content="Personal portfolio of Krishna Sharma - Computer Science (AI & ML) Engineer. Custom Neo-Brutalist Bento Grid layout showcasing AI pipelines, backend telemetry, and stats.">
+  <title>Krishna Sharma | AI &amp; Full-Stack Systems Engineer</title>
+  <meta name="description" content="Portfolio of Krishna Sharma — Computer Science (AI & ML) Undergraduate at Galgotias University. Autonomous Multi-Agent AI Pipelines, SAP S/4HANA Enterprise Systems, and Scalable Backends.">
   
-  <!-- Preconnect and pull Google Fonts (Space Grotesk & JetBrains Mono) -->
+  <!-- Preconnect and Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="styles.css?v=2.0">
+  <!-- Main Stylesheet with Cache Busting -->
+  <link rel="stylesheet" href="styles.css?v=3.0">
 </head>
 <body>
 
-  <!-- Top Brutalist Navbar -->
-  <nav class="brutalist-nav">
-    <div class="nav-brand">KRISHNA SHARMA</div>
-    <div class="nav-status">
-      <span class="status-dot"></span>
-      <span class="status-text">SYSTEM: ACTIVE</span>
-    </div>
-    <div class="nav-links">
-      <a href="#projects" class="nav-link">PROJECTS</a>
-      <a href="#skills" class="nav-link">SKILLS</a>
-      <a href="#activity" class="nav-link">ACTIVITY</a>
-      <button class="nav-link resume-nav-btn" id="nav-resume-btn">RESUME</button>
-      <a href="https://codolio.com/profile/krishnx" target="_blank" rel="noopener" class="nav-link codolio-nav-btn">CODOLIO ⚡</a>
-      <a href="https://github.com/itsksfit" target="_blank" rel="noopener" class="nav-link">GITHUB</a>
-      <a href="https://www.linkedin.com/in/krishnasharmx/" target="_blank" rel="noopener" class="nav-link">LINKEDIN</a>
-      <a href="https://leetcode.com/u/krishnxsharmx/" target="_blank" rel="noopener" class="nav-link">LEETCODE</a>
-      <a href="mailto:ks1445674@gmail.com" class="nav-link cta-link">CONTACT</a>
-    </div>
-  </nav>
+  <!-- Ambient Background Glows -->
+  <div class="ambient-glow glow-top-left"></div>
+  <div class="ambient-glow glow-top-right"></div>
+  <div class="ambient-glow glow-center"></div>
 
-  <main class="portfolio-container">
-    <!-- HERO SECTION -->
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="#" class="nav-logo">
+        <span class="logo-symbol">&lt;/&gt;</span>
+        <span class="logo-name">KRISHNA SHARMA</span>
+      </a>
+
+      <div class="nav-status-pill">
+        <span class="pulse-dot"></span>
+        <span class="pulse-text">AVAILABLE FOR INTERNSHIPS</span>
+      </div>
+
+      <div class="nav-menu">
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#activity" class="nav-link">Activity</a>
+        <button class="nav-btn-highlight resume-btn-trigger" id="nav-resume-btn">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+          Resume
+        </button>
+        <a href="https://codolio.com/profile/krishnx" target="_blank" rel="noopener" class="nav-btn-codolio">
+          <svg class="btn-icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          Codolio
+        </a>
+        <a href="https://github.com/itsksfit" target="_blank" rel="noopener" class="nav-icon-link" title="GitHub">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/krishnasharmx/" target="_blank" rel="noopener" class="nav-icon-link" title="LinkedIn">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <button class="nav-cta-btn" id="contact-trigger-btn">
+          Connect
+          <svg class="btn-arrow" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page-wrapper">
+    <!-- ========================================================================= -->
+    <!-- HERO SECTION                                                              -->
+    <!-- ========================================================================= -->
     <section class="hero-section">
-      <div class="hero-content">
-        <div class="hero-tag">// CS UNDERGRADUATE (AI & ML) &bull; GALGOTIAS UNIVERSITY</div>
-        <h1 class="hero-title">
-          KRISHNA<br>SHARMA
+      <div class="hero-text-content">
+        <div class="hero-badge">
+          <span class="badge-icon">⚡</span>
+          <span>B.Tech CS (AI &amp; ML) &bull; Galgotias University &bull; CGPA 8.0</span>
+        </div>
+        
+        <h1 class="hero-name">
+          KRISHNA <span class="gradient-text">SHARMA</span>
         </h1>
-        <p class="hero-subtitle">
-          BUILDING AUTONOMOUS AI AGENTS, ENTERPRISE SUPPLY CHAIN RESILIENCE PLATFORMS, AND HIGH-PERFORMANCE BACKEND SYSTEMS.
+        
+        <p class="hero-tagline">
+          Building <strong>Autonomous AI Pipelines</strong>, <strong>Enterprise Supply Chain Platforms (SAP S/4HANA)</strong>, and High-Performance Backend Systems.
         </p>
-        <div class="hero-actions">
-          <button class="brutalist-btn primary" id="hero-resume-btn">
-            VIEW RESUME
-            <span class="btn-arrow">📄</span>
+
+        <p class="hero-subtext">
+          Shipped multiple production-deployed platforms cutting enterprise &amp; creator workflow times by up to 90%. Former Cloud Computing Club Head with deep focus on Generative AI, Multi-Agent Systems, and Algorithmic Problem Solving.
+        </p>
+
+        <div class="hero-cta-group">
+          <button class="btn-glow-primary resume-btn-trigger" id="hero-resume-btn">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+            View Interactive Resume
           </button>
-          <a href="https://codolio.com/profile/krishnx" target="_blank" rel="noopener" class="brutalist-btn secondary codolio-hero-btn">
-            CODOLIO PROFILE
-            <span class="btn-arrow">⚡</span>
+          
+          <a href="https://codolio.com/profile/krishnx" target="_blank" rel="noopener" class="btn-glow-amber">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+            Codolio Profile
+            <span class="external-arrow">↗</span>
           </a>
-          <a href="#projects" class="brutalist-btn secondary">
-            EXPLORE PROJECTS
-            <span class="btn-arrow">↓</span>
+
+          <a href="#projects" class="btn-glass">
+            Explore Projects
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
           </a>
-          <a href="mailto:ks1445674@gmail.com" class="brutalist-btn secondary">
-            GET IN TOUCH
-            <span class="btn-arrow">→</span>
+
+          <a href="mailto:ks1445674@gmail.com" class="btn-glass mail-trigger">
+            Get in Touch
           </a>
         </div>
       </div>
-      <div class="hero-portrait-wrapper">
-        <div class="portrait-shadow-box">
-          <div class="portrait-border-box">
-            <img src="profile.png" alt="Krishna Sharma Portrait" class="portrait-img">
-            <!-- Retro scanline overlay specifically for the portrait -->
-            <div class="portrait-overlay"></div>
+
+      <div class="hero-visual">
+        <div class="portrait-card-glow">
+          <div class="portrait-container">
+            <img src="profile.png" alt="Krishna Sharma" class="portrait-image">
+            <div class="portrait-glass-overlay"></div>
+          </div>
+          <!-- Floating Feature Badges -->
+          <div class="floating-chip chip-1">
+            <span class="chip-dot"></span>
+            <span>Next.js + SAP S/4HANA</span>
+          </div>
+          <div class="floating-chip chip-2">
+            <span class="chip-dot amber"></span>
+            <span>Multi-Agent GenAI</span>
+          </div>
+          <div class="floating-chip chip-3">
+            <span class="chip-dot purple"></span>
+            <span>LeetCode &bull; Codolio @krishnx</span>
           </div>
         </div>
       </div>
@@ -79,227 +132,289 @@
     <!-- ========================================================================= -->
     <!-- SECTION 1: FEATURED PROJECTS & SYSTEM ARCHITECTURES                       -->
     <!-- ========================================================================= -->
-    <section class="portfolio-section" id="projects">
-      <div class="section-header-block">
-        <div class="section-title-tag">// 01. PRODUCTION PLATFORMS &amp; AGENT PIPELINES</div>
-        <h2 class="section-heading-text">FEATURED PROJECTS</h2>
+    <section class="content-section" id="projects">
+      <div class="section-title-wrap">
+        <div class="section-eyebrow">// 01. PRODUCTION PLATFORMS &amp; AGENT PIPELINES</div>
+        <h2 class="section-title">Featured Projects &amp; Architectures</h2>
+        <p class="section-subtitle">Real-world AI systems, enterprise integrations, and high-throughput microservices.</p>
       </div>
 
-      <div class="bento-grid">
-        <!-- CARD: INTERACTIVE SYSTEM TELEMETRY SIMULATOR -->
-        <div class="bento-card system-card span-12">
-          <div class="card-header">
-            <div class="header-dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
+      <!-- Bento Grid: Projects -->
+      <div class="bento-container">
+        
+        <!-- CARD: LIVE TELEMETRY SIMULATOR -->
+        <div class="bento-glass-card telemetry-card col-span-12">
+          <div class="card-top-bar">
+            <div class="window-controls">
+              <span class="dot close"></span>
+              <span class="dot minimize"></span>
+              <span class="dot maximize"></span>
             </div>
-            <div class="system-tab-headers">
-              <button class="system-tab active" id="tab-sentinelchain">SentinelChain (Enterprise Supply Chain)</button>
-              <button class="system-tab" id="tab-contentflow">ContentFlow AI (Creator Intelligence)</button>
+            
+            <!-- Tab Switcher -->
+            <div class="project-tab-switcher">
+              <button class="tab-btn active" id="tab-sentinelchain">
+                <span class="tab-dot"></span>
+                SentinelChain (SAP S/4HANA Platform)
+              </button>
+              <button class="tab-btn" id="tab-contentflow">
+                <span class="tab-dot"></span>
+                ContentFlow AI (Creator Engine)
+              </button>
             </div>
-            <span class="status-indicator" style="margin-left: auto;">
-              <span class="status-dot pulsing" style="background-color: var(--accent-blue);"></span> LIVE TELEMETRY SIMULATOR
-            </span>
+
+            <div class="live-badge">
+              <span class="live-dot"></span>
+              LIVE SIMULATION ENGINE
+            </div>
           </div>
-          <div class="card-body system-body">
-            <div class="system-monitor-box">
-              <div class="system-logs" id="pipeline-logs">Initializing simulation engine...</div>
+
+          <div class="telemetry-body">
+            <!-- Terminal Output Stream -->
+            <div class="terminal-view">
+              <div class="terminal-logs" id="pipeline-logs">Initializing multi-agent pipeline stream...</div>
             </div>
 
-            <!-- Interactive Architecture Flow Map -->
-            <div class="system-flow-container" id="system-flow-map">
-              <!-- Nodes populated dynamically by app.js -->
+            <!-- Architecture Flow Pipeline -->
+            <div class="pipeline-flow-wrap">
+              <div class="flow-header-label">PIPELINE ARCHITECTURE &bull; ACTIVE EXECUTION STAGE:</div>
+              <div class="pipeline-flow-nodes" id="system-flow-map">
+                <!-- Injected via JavaScript -->
+              </div>
             </div>
 
-            <div class="system-info">
-              <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; flex-wrap: wrap; gap: 10px;">
-                <h3 class="system-title" id="system-title" style="margin: 0;">SentinelChain</h3>
-                <div style="display: flex; gap: 8px;">
-                  <a href="https://github.com/itsksfit/SentinelChain_SAP" id="system-repo" target="_blank" rel="noopener" class="system-demo-link" style="background: transparent; border-color: var(--border-dark);">GITHUB ↗</a>
-                  <a href="https://sentinelchain-gilt.vercel.app/" id="system-link" target="_blank" rel="noopener" class="system-demo-link">LIVE DEMO ↗</a>
+            <!-- Project Details & Direct Links -->
+            <div class="telemetry-meta">
+              <div class="meta-header">
+                <div>
+                  <h3 class="meta-title" id="system-title">SentinelChain</h3>
+                  <p class="meta-desc" id="system-desc">
+                    Autonomous B2B supply chain resilience platform. Detects semiconductor disruptions across global wafer fabs and automates SAP S/4HANA BOM explosion, real-time Mouser sourcing, and SAP Ariba purchase execution.
+                  </p>
+                </div>
+                <div class="meta-actions">
+                  <a href="https://github.com/itsksfit/SentinelChain_SAP" id="system-repo" target="_blank" rel="noopener" class="btn-subtle">
+                    <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                    GitHub ↗
+                  </a>
+                  <a href="https://sentinelchain-gilt.vercel.app/" id="system-link" target="_blank" rel="noopener" class="btn-highlight">
+                    Live Demo ↗
+                  </a>
                 </div>
               </div>
-              <p class="system-desc" id="system-desc">Autonomous B2B supply chain resilience platform. Detects semiconductor disruptions across global wafer fabs and automates SAP S/4HANA BOM explosion, real-time Mouser sourcing, and SAP Ariba purchase execution.</p>
-              <div class="system-tech-tags" id="system-tech-tags">
-                <span>Next.js</span>
-                <span>React 19</span>
-                <span>SAP S/4HANA</span>
-                <span>Mouser API</span>
-                <span>Groq</span>
-                <span>Three.js</span>
-                <span>Tailwind CSS</span>
+
+              <div class="tech-tag-row" id="system-tech-tags">
+                <!-- Injected via JavaScript -->
               </div>
             </div>
           </div>
         </div>
 
-        <!-- CARD: PROJECT 1 DEEP DIVE - SENTINELCHAIN -->
-        <div class="bento-card project-spotlight-card span-6">
-          <div class="card-header">
-            <div class="header-title">project_01_sentinelchain.md</div>
-            <span class="project-badge">ENTERPRISE RESILIENCE</span>
+        <!-- SPOTLIGHT 1: SENTINELCHAIN -->
+        <div class="bento-glass-card spotlight-card col-span-6">
+          <div class="card-top-bar">
+            <span class="card-label">PROJECT DEEP-DIVE</span>
+            <span class="pill-badge cyan">ENTERPRISE SAP RESILIENCE</span>
           </div>
-          <div class="card-body project-spotlight-body">
-            <h3 class="spotlight-title">SentinelChain — SAP S/4HANA Supply Chain Platform</h3>
-            <p class="spotlight-desc">
-              Autonomous B2B supply chain intelligence platform connecting USGS seismic alerts &amp; US Federal Register EAR policies to SAP S/4HANA OData APIs. Explodes BOMs to calculate dollar-level revenue-at-risk ($14.2M/day exposure) and executes live Mouser API spot sourcing under strict enterprise guardrails.
+          <div class="spotlight-content">
+            <h3 class="project-heading">SentinelChain — SAP S/4HANA Supply Chain Platform</h3>
+            <p class="project-summary">
+              Autonomous B2B supply chain resilience platform connecting USGS seismic alerts &amp; US Federal Register EAR policies to SAP S/4HANA OData APIs. Explodes multi-level Bills of Materials in real time, calculating exact dollar-level exposure ($14.2M/day revenue-at-risk), and executes live spot sourcing via Mouser API under strict confidence guardrails (&plusmn;10% price ceiling, 95% evidence confidence).
             </p>
-            <div class="spotlight-metrics-grid">
-              <div class="spotlight-metric-item">
-                <span class="s-metric-val">&lt; 2 min</span>
-                <span class="s-metric-lbl">Disruption Resolution (was 2 weeks)</span>
+
+            <div class="metrics-card-grid">
+              <div class="metric-box">
+                <span class="metric-number">&lt; 2 min</span>
+                <span class="metric-label">Disruption Resolution (was 2 weeks)</span>
               </div>
-              <div class="spotlight-metric-item">
-                <span class="s-metric-val">100%</span>
-                <span class="s-metric-lbl">Verified Live Mouser Stock</span>
+              <div class="metric-box">
+                <span class="metric-number">100%</span>
+                <span class="metric-label">Live Sourced Mouser Stock</span>
               </div>
             </div>
-            <div class="spotlight-footer">
-              <div class="system-tech-tags">
-                <span>Next.js</span>
-                <span>SAP S/4HANA</span>
-                <span>Mouser API</span>
-                <span>Groq LLM</span>
-                <span>Three.js</span>
+
+            <div class="project-bottom">
+              <div class="tech-tag-row">
+                <span class="tag">Next.js</span>
+                <span class="tag">React 19</span>
+                <span class="tag">SAP S/4HANA</span>
+                <span class="tag">SAP Ariba</span>
+                <span class="tag">Mouser API</span>
+                <span class="tag">Groq LLM</span>
+                <span class="tag">Three.js</span>
               </div>
-              <div class="spotlight-links">
-                <a href="https://sentinelchain-gilt.vercel.app/" target="_blank" rel="noopener" class="spotlight-btn primary">Live Platform ↗</a>
-                <a href="https://github.com/itsksfit/SentinelChain_SAP" target="_blank" rel="noopener" class="spotlight-btn secondary">Repository ↗</a>
+              <div class="card-btn-row">
+                <a href="https://sentinelchain-gilt.vercel.app/" target="_blank" rel="noopener" class="btn-glow-primary small">
+                  Live Platform ↗
+                </a>
+                <a href="https://github.com/itsksfit/SentinelChain_SAP" target="_blank" rel="noopener" class="btn-glass small">
+                  Repository ↗
+                </a>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- CARD: PROJECT 2 DEEP DIVE - CONTENTFLOW AI -->
-        <div class="bento-card project-spotlight-card span-6">
-          <div class="card-header">
-            <div class="header-title">project_02_contentflow.md</div>
-            <span class="project-badge">AI AGENT PIPELINE</span>
+        <!-- SPOTLIGHT 2: CONTENTFLOW AI -->
+        <div class="bento-glass-card spotlight-card col-span-6">
+          <div class="card-top-bar">
+            <span class="card-label">PROJECT DEEP-DIVE</span>
+            <span class="pill-badge purple">4-AGENT CREATOR PIPELINE</span>
           </div>
-          <div class="card-body project-spotlight-body">
-            <h3 class="spotlight-title">ContentFlow AI — 4-Agent Creator Engine</h3>
-            <p class="spotlight-desc">
-              Multi-agent content discovery, trend validation, Hinglish script generation, and psychological viral hook creation pipeline. Ingests real-time Reddit JSON API &amp; YouTube Shorts data with weighted scoring formulas and zero external LLM API costs.
+          <div class="spotlight-content">
+            <h3 class="project-heading">ContentFlow AI — Creator Intelligence Engine</h3>
+            <p class="project-summary">
+              Multi-agent content discovery, trend validation, Hinglish script synthesis, and psychological viral hook creation pipeline. Ingests live Reddit JSON API feeds &amp; YouTube Shorts metadata with weighted engagement formulas (Views 40%, ER% 35%, Comments 25%) and zero external LLM API costs.
             </p>
-            <div class="spotlight-metrics-grid">
-              <div class="spotlight-metric-item">
-                <span class="s-metric-val">90%</span>
-                <span class="s-metric-lbl">Manual Research Time Cut</span>
+
+            <div class="metrics-card-grid">
+              <div class="metric-box">
+                <span class="metric-number">90%</span>
+                <span class="metric-label">Manual Research Time Saved</span>
               </div>
-              <div class="spotlight-metric-item">
-                <span class="s-metric-val">&lt; 10s</span>
-                <span class="s-metric-lbl">Script Generation Time</span>
+              <div class="metric-box">
+                <span class="metric-number">&lt; 10s</span>
+                <span class="metric-label">End-to-End Script Generation</span>
               </div>
             </div>
-            <div class="spotlight-footer">
-              <div class="system-tech-tags">
-                <span>Python</span>
-                <span>FastAPI</span>
-                <span>NLP</span>
-                <span>Reddit API</span>
-                <span>yt-dlp</span>
-                <span>Vercel</span>
+
+            <div class="project-bottom">
+              <div class="tech-tag-row">
+                <span class="tag">Python</span>
+                <span class="tag">FastAPI</span>
+                <span class="tag">NLP</span>
+                <span class="tag">Reddit API</span>
+                <span class="tag">yt-dlp</span>
+                <span class="tag">Vercel</span>
+                <span class="tag">Render</span>
               </div>
-              <div class="spotlight-links">
-                <a href="https://content-flow-ai-lemon.vercel.app/" target="_blank" rel="noopener" class="spotlight-btn primary">Live App ↗</a>
-                <a href="https://github.com/itsksfit/ContentFlow-AI" target="_blank" rel="noopener" class="spotlight-btn secondary">Repository ↗</a>
+              <div class="card-btn-row">
+                <a href="https://content-flow-ai-lemon.vercel.app/" target="_blank" rel="noopener" class="btn-glow-primary small">
+                  Live Platform ↗
+                </a>
+                <a href="https://github.com/itsksfit/ContentFlow-AI" target="_blank" rel="noopener" class="btn-glass small">
+                  Repository ↗
+                </a>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </section>
 
     <!-- ========================================================================= -->
-    <!-- SECTION 2: TECHNICAL SKILLS & CS ARCHITECTURE                             -->
+    <!-- SECTION 2: TECHNICAL SKILLS & STACK ARCHITECTURE                          -->
     <!-- ========================================================================= -->
-    <section class="portfolio-section" id="skills">
-      <div class="section-header-block">
-        <div class="section-title-tag">// 02. TECHNICAL COMPETENCIES &amp; STACK ARCHITECTURE</div>
-        <h2 class="section-heading-text">SKILLS &amp; EXPERTISE</h2>
+    <section class="content-section" id="skills">
+      <div class="section-title-wrap">
+        <div class="section-eyebrow">// 02. TECHNICAL COMPETENCIES &amp; STACK ARCHITECTURE</div>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
+        <p class="section-subtitle">Core languages, AI/ML architectures, enterprise backend APIs, and computer science fundamentals.</p>
       </div>
 
-      <div class="bento-grid">
-        <!-- CARD: CURRENT STACK CODE BLOCK -->
-        <div class="bento-card current-stack-card span-6">
-          <div class="card-header">
-            <div class="header-dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
+      <div class="bento-container">
+        <!-- Interactive Code IDE Card -->
+        <div class="bento-glass-card code-ide-card col-span-6">
+          <div class="card-top-bar">
+            <div class="window-controls">
+              <span class="dot close"></span>
+              <span class="dot minimize"></span>
+              <span class="dot maximize"></span>
             </div>
-            <div class="header-title">skills.js &bull; interactive ide</div>
-            <span style="margin-left: auto; font-family: var(--font-mono); font-size: 10px; color: var(--text-slate);">CLICK TO REPLAY</span>
+            <span class="file-name">engineer_profile.ts &bull; Interactive IDE</span>
+            <span class="replay-badge">CLICK TO REPLAY</span>
           </div>
-          <div class="card-body code-body">
-            <pre class="code-area"><code id="typing-code"></code></pre>
+          <div class="code-editor-body">
+            <pre class="code-block"><code id="typing-code"></code></pre>
           </div>
         </div>
 
-        <!-- CARD: CATEGORIZED SKILL MATRIX -->
-        <div class="bento-card skill-matrix-card span-6">
-          <div class="card-header">
-            <div class="header-title">competencies_matrix.json</div>
+        <!-- Categorized Skill Matrix -->
+        <div class="bento-glass-card matrix-card col-span-6">
+          <div class="card-top-bar">
+            <span class="card-label">TECHNICAL MATRIX</span>
+            <span class="pill-badge blue">VERIFIED EXPERTISE</span>
           </div>
-          <div class="card-body skill-matrix-body">
-            <div class="matrix-group">
-              <div class="matrix-group-lbl">// LANGUAGES</div>
-              <div class="matrix-pills">
-                <span class="skill-pill highlight">Python</span>
-                <span class="skill-pill highlight">C++</span>
-                <span class="skill-pill highlight">Java</span>
-                <span class="skill-pill">JavaScript</span>
-                <span class="skill-pill">SQL</span>
-                <span class="skill-pill">Shell Scripting</span>
+          
+          <div class="matrix-content">
+            <!-- Group 1 -->
+            <div class="skill-category">
+              <div class="category-title">
+                <span class="category-icon">💻</span>
+                <span>LANGUAGES</span>
+              </div>
+              <div class="skills-pill-wrap">
+                <span class="skill-chip glow">Python</span>
+                <span class="skill-chip glow">C++</span>
+                <span class="skill-chip glow">Java</span>
+                <span class="skill-chip">JavaScript</span>
+                <span class="skill-chip">SQL</span>
+                <span class="skill-chip">Shell Scripting</span>
               </div>
             </div>
 
-            <div class="matrix-group">
-              <div class="matrix-group-lbl">// AI / ML &amp; GENERATIVE SYSTEMS</div>
-              <div class="matrix-pills">
-                <span class="skill-pill highlight">Multi-Agent Systems</span>
-                <span class="skill-pill highlight">Generative AI</span>
-                <span class="skill-pill">NLP &amp; LLMs</span>
-                <span class="skill-pill">RAG Pipelines</span>
-                <span class="skill-pill">Prompt Engineering</span>
-                <span class="skill-pill">LangChain</span>
+            <!-- Group 2 -->
+            <div class="skill-category">
+              <div class="category-title">
+                <span class="category-icon">🧠</span>
+                <span>AI / ML &amp; MULTI-AGENT SYSTEMS</span>
+              </div>
+              <div class="skills-pill-wrap">
+                <span class="skill-chip glow">Multi-Agent Systems</span>
+                <span class="skill-chip glow">Generative AI</span>
+                <span class="skill-chip glow">NLP &amp; LLMs</span>
+                <span class="skill-chip">RAG Pipelines</span>
+                <span class="skill-chip">LangChain</span>
+                <span class="skill-chip">Prompt Engineering</span>
               </div>
             </div>
 
-            <div class="matrix-group">
-              <div class="matrix-group-lbl">// BACKEND &amp; ENTERPRISE ERP</div>
-              <div class="matrix-pills">
-                <span class="skill-pill highlight">FastAPI</span>
-                <span class="skill-pill highlight">Next.js</span>
-                <span class="skill-pill">SAP S/4HANA OData</span>
-                <span class="skill-pill">SAP Ariba PR</span>
-                <span class="skill-pill">Mouser Sourcing API</span>
-                <span class="skill-pill">Django</span>
-                <span class="skill-pill">RESTful APIs</span>
+            <!-- Group 3 -->
+            <div class="skill-category">
+              <div class="category-title">
+                <span class="category-icon">⚡</span>
+                <span>BACKEND &amp; ENTERPRISE ERP</span>
+              </div>
+              <div class="skills-pill-wrap">
+                <span class="skill-chip glow">FastAPI</span>
+                <span class="skill-chip glow">Next.js (App/Pages)</span>
+                <span class="skill-chip glow">SAP S/4HANA OData</span>
+                <span class="skill-chip">SAP Ariba PR</span>
+                <span class="skill-chip">Mouser Sourcing API</span>
+                <span class="skill-chip">Django</span>
+                <span class="skill-chip">RESTful APIs</span>
               </div>
             </div>
 
-            <div class="matrix-group">
-              <div class="matrix-group-lbl">// FRONTEND &amp; DATABASES</div>
-              <div class="matrix-pills">
-                <span class="skill-pill highlight">React 19</span>
-                <span class="skill-pill">Tailwind CSS</span>
-                <span class="skill-pill">Three.js</span>
-                <span class="skill-pill">MongoDB</span>
-                <span class="skill-pill">MySQL</span>
+            <!-- Group 4 -->
+            <div class="skill-category">
+              <div class="category-title">
+                <span class="category-icon">🎨</span>
+                <span>FRONTEND &amp; DATABASES</span>
+              </div>
+              <div class="skills-pill-wrap">
+                <span class="skill-chip glow">React 19</span>
+                <span class="skill-chip">Tailwind CSS</span>
+                <span class="skill-chip">Three.js</span>
+                <span class="skill-chip">MongoDB</span>
+                <span class="skill-chip">MySQL</span>
               </div>
             </div>
 
-            <div class="matrix-group">
-              <div class="matrix-group-lbl">// CS FUNDAMENTALS &amp; INFRA</div>
-              <div class="matrix-pills">
-                <span class="skill-pill">DSA</span>
-                <span class="skill-pill">OOP</span>
-                <span class="skill-pill">DBMS</span>
-                <span class="skill-pill">Operating Systems</span>
-                <span class="skill-pill">Computer Networks</span>
-                <span class="skill-pill">Git / Linux / Docker</span>
+            <!-- Group 5 -->
+            <div class="skill-category">
+              <div class="category-title">
+                <span class="category-icon">🛠️</span>
+                <span>CS FUNDAMENTALS &amp; DEVOPS</span>
+              </div>
+              <div class="skills-pill-wrap">
+                <span class="skill-chip">Data Structures &amp; Algorithms</span>
+                <span class="skill-chip">OOP</span>
+                <span class="skill-chip">DBMS</span>
+                <span class="skill-chip">Operating Systems</span>
+                <span class="skill-chip">Computer Networks</span>
+                <span class="skill-chip">Git / Linux / Docker</span>
               </div>
             </div>
           </div>
@@ -310,197 +425,230 @@
     <!-- ========================================================================= -->
     <!-- SECTION 3: LIVE TELEMETRY, GITHUB & CODOLIO PROFILES                      -->
     <!-- ========================================================================= -->
-    <section class="portfolio-section" id="activity">
-      <div class="section-header-block">
-        <div class="section-title-tag">// 03. LIVE TELEMETRY &amp; CODING PROFILES</div>
-        <h2 class="section-heading-text">ACTIVITY &amp; STATS</h2>
+    <section class="content-section" id="activity">
+      <div class="section-title-wrap">
+        <div class="section-eyebrow">// 03. CODING PROFILES &amp; LIVE TELEMETRY</div>
+        <h2 class="section-title">Activity &amp; Profiles</h2>
+        <p class="section-subtitle">Live GitHub telemetry, algorithmic coding metrics on Codolio &amp; LeetCode, and verifiable credentials.</p>
       </div>
 
-      <div class="bento-grid">
-        <!-- CARD: GITHUB LIVE TELEMETRY -->
-        <div class="bento-card github-card span-6">
-          <div class="card-header">
-            <div class="header-dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
+      <div class="bento-container">
+        <!-- GitHub Live Telemetry Card -->
+        <div class="bento-glass-card github-card col-span-6">
+          <div class="card-top-bar">
+            <div class="window-controls">
+              <span class="dot close"></span>
+              <span class="dot minimize"></span>
+              <span class="dot maximize"></span>
             </div>
-            <div class="header-title">GITHUB TELEMETRY &bull; itsksfit</div>
-            <span class="pulse-indicator" style="margin-left: auto;"><span class="pulse-dot"></span> LIVE SYNC</span>
+            <span class="file-name">GITHUB LIVE TELEMETRY &bull; @itsksfit</span>
+            <div class="live-sync-indicator">
+              <span class="sync-dot"></span>
+              LIVE SYNC
+            </div>
           </div>
-          <div class="card-body github-body">
-            <div class="git-stats-row">
-              <div class="git-stat">
-                <span class="git-stat-val" id="active-repos-val">10</span>
-                <span class="git-stat-lbl">Active Repos</span>
+
+          <div class="github-content">
+            <div class="git-stats-deck">
+              <div class="git-stat-box">
+                <span class="stat-big" id="active-repos-val">10</span>
+                <span class="stat-small">Active Repositories</span>
               </div>
-              <div class="git-stat">
-                <span class="git-stat-val" id="commit-counter">124</span>
-                <span class="git-stat-lbl">Live Commits (2026)</span>
+              <div class="git-stat-box">
+                <span class="stat-big" id="commit-counter">124</span>
+                <span class="stat-small">Live Commits (2026)</span>
               </div>
-              <div class="git-stat">
-                <span class="git-stat-val">100%</span>
-                <span class="git-stat-lbl">Open Source Backed</span>
+              <div class="git-stat-box">
+                <span class="stat-big">100%</span>
+                <span class="stat-small">Open Source Code</span>
               </div>
             </div>
 
-            <div class="git-repos-list">
-              <a href="https://github.com/itsksfit/SentinelChain_SAP" target="_blank" rel="noopener" class="git-repo-item">
-                <span class="repo-name">SentinelChain_SAP</span>
-                <span class="repo-lang ts">Next.js / SAP</span>
-                <span class="repo-desc">Autonomous B2B supply chain resilience platform.</span>
+            <div class="repo-showcase-list">
+              <a href="https://github.com/itsksfit/SentinelChain_SAP" target="_blank" rel="noopener" class="repo-row">
+                <div class="repo-left">
+                  <span class="repo-symbol">📁</span>
+                  <span class="repo-title">SentinelChain_SAP</span>
+                </div>
+                <span class="repo-tag-badge ts">Next.js / SAP</span>
+                <span class="repo-action-arrow">↗</span>
               </a>
-              <a href="https://github.com/itsksfit/ContentFlow-AI" target="_blank" rel="noopener" class="git-repo-item">
-                <span class="repo-name">ContentFlow-AI</span>
-                <span class="repo-lang py">Python / FastAPI</span>
-                <span class="repo-desc">4-agent content discovery &amp; Hinglish script generation pipeline.</span>
+
+              <a href="https://github.com/itsksfit/ContentFlow-AI" target="_blank" rel="noopener" class="repo-row">
+                <div class="repo-left">
+                  <span class="repo-symbol">📁</span>
+                  <span class="repo-title">ContentFlow-AI</span>
+                </div>
+                <span class="repo-tag-badge py">Python / FastAPI</span>
+                <span class="repo-action-arrow">↗</span>
               </a>
-              <a href="https://github.com/itsksfit/Shell-Automation" target="_blank" rel="noopener" class="git-repo-item">
-                <span class="repo-name">Shell-Automation</span>
-                <span class="repo-lang sh">Shell</span>
-                <span class="repo-desc">Automation and workspace scripts.</span>
+
+              <a href="https://github.com/itsksfit/Shell-Automation" target="_blank" rel="noopener" class="repo-row">
+                <div class="repo-left">
+                  <span class="repo-symbol">📁</span>
+                  <span class="repo-title">Shell-Automation</span>
+                </div>
+                <span class="repo-tag-badge sh">Shell / Bash</span>
+                <span class="repo-action-arrow">↗</span>
               </a>
             </div>
 
-            <div class="git-chart-header">
-              <span>CONTRIBUTIONS TELEMETRY MATRIX</span>
-              <a href="https://github.com/itsksfit" target="_blank" rel="noopener" class="git-profile-link">github.com/itsksfit ↗</a>
-            </div>
-            <div class="git-commit-grid" id="commit-grid">
-              <!-- Grid blocks populated dynamically -->
+            <div class="git-heatmap-wrap">
+              <div class="heatmap-header">
+                <span>CONTRIBUTION ACTIVITY HEATMAP</span>
+                <a href="https://github.com/itsksfit" target="_blank" rel="noopener" class="view-profile-link">github.com/itsksfit ↗</a>
+              </div>
+              <div class="git-commit-matrix" id="commit-grid">
+                <!-- Dynamically populated via JS -->
+              </div>
             </div>
           </div>
         </div>
 
-        <!-- CARD: CODOLIO & COMPETITIVE PROGRAMMING PROFILE -->
-        <div class="bento-card codolio-card span-6">
-          <div class="card-header">
-            <div class="header-dots">
-              <span class="dot red"></span>
-              <span class="dot yellow"></span>
-              <span class="dot green"></span>
+        <!-- Codolio Profile Card -->
+        <div class="bento-glass-card codolio-card col-span-6">
+          <div class="card-top-bar">
+            <div class="window-controls">
+              <span class="dot close"></span>
+              <span class="dot minimize"></span>
+              <span class="dot maximize"></span>
             </div>
-            <div class="header-title">CODOLIO PROFILE &bull; krishnx</div>
-            <span class="pulse-indicator" style="margin-left: auto;"><span class="pulse-dot"></span> LIVE PROFILE</span>
+            <span class="file-name">CODOLIO ANALYTICS &bull; @krishnx</span>
+            <div class="codolio-pill">
+              <span class="amber-dot"></span>
+              DSA &bull; CP PROFILE
+            </div>
           </div>
-          <div class="card-body codolio-body">
-            <div class="codolio-hero-block">
-              <div class="codolio-brand-row">
-                <div class="codolio-logo-badge">⚡ CODOLIO</div>
-                <a href="https://codolio.com/profile/krishnx" target="_blank" rel="noopener" class="codolio-profile-badge">@krishnx ↗</a>
+
+          <div class="codolio-content">
+            <div class="codolio-hero-box">
+              <div class="codolio-header-line">
+                <div class="codolio-icon-badge">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                  <span>CODOLIO</span>
+                </div>
+                <a href="https://codolio.com/profile/krishnx" target="_blank" rel="noopener" class="codolio-handle-badge">
+                  @krishnx ↗
+                </a>
               </div>
-              <h3 class="codolio-title">Comprehensive Coding &amp; DSA Portfolio</h3>
-              <p class="codolio-desc">
-                Centralized coding analytics tracking algorithmic problem-solving across LeetCode, DSA sheets, and competitive programming milestones.
+              <h3 class="codolio-headline">Unified Algorithmic Problem Solving Tracker</h3>
+              <p class="codolio-subline">
+                Continuous DSA practice across LeetCode, NeetCode 150, Striver SDE Sheet, and competitive programming platforms.
               </p>
             </div>
 
-            <div class="codolio-metrics-grid">
-              <div class="codolio-metric-box">
-                <span class="codolio-metric-val">LeetCode</span>
-                <span class="codolio-metric-lbl">Active Solver Profile</span>
+            <div class="codolio-feature-grid">
+              <div class="cod-box">
+                <span class="cod-val">LeetCode</span>
+                <span class="cod-sub">Active Solver Profile</span>
               </div>
-              <div class="codolio-metric-box">
-                <span class="codolio-metric-val">DSA Sheets</span>
-                <span class="codolio-metric-lbl">Striver &bull; Blind 75 &bull; NeetCode</span>
+              <div class="cod-box">
+                <span class="cod-val">DSA Sheets</span>
+                <span class="cod-sub">Blind 75 &bull; Striver &bull; NeetCode</span>
               </div>
-              <div class="codolio-metric-box">
-                <span class="codolio-metric-val">Algorithms</span>
-                <span class="codolio-metric-lbl">C++ &bull; Java &bull; Python</span>
+              <div class="cod-box">
+                <span class="cod-val">Languages</span>
+                <span class="cod-sub">C++ &bull; Java &bull; Python</span>
               </div>
-              <div class="codolio-metric-box">
-                <span class="codolio-metric-val">Active</span>
-                <span class="codolio-metric-lbl">Continuous Practice</span>
+              <div class="cod-box">
+                <span class="cod-val">Verified</span>
+                <span class="cod-sub">Tracked Performance</span>
               </div>
             </div>
 
-            <div class="codolio-action-bar">
-              <a href="https://codolio.com/profile/krishnx" target="_blank" rel="noopener" class="codolio-cta-btn">
-                VISIT CODOLIO PROFILE ↗
+            <div class="codolio-cta-deck">
+              <a href="https://codolio.com/profile/krishnx" target="_blank" rel="noopener" class="btn-glow-amber full-width">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                Explore Codolio Profile ↗
               </a>
-              <a href="https://leetcode.com/u/krishnxsharmx/" target="_blank" rel="noopener" class="codolio-sub-btn">
-                LEETCODE PROFILE ↗
+              <a href="https://leetcode.com/u/krishnxsharmx/" target="_blank" rel="noopener" class="btn-glass full-width">
+                View LeetCode Profile ↗
               </a>
             </div>
           </div>
         </div>
 
-        <!-- STATS / IMPACT CARDS ROW -->
-        <div class="bento-card stat-card span-3">
-          <div class="card-body stat-body">
-            <div class="stat-number"><span class="counter" data-target="2">0</span></div>
-            <div class="stat-label">PRODUCTION AI PLATFORMS</div>
+        <!-- 4 Stat Metric Cards -->
+        <div class="bento-glass-card stat-metric-card col-span-3">
+          <div class="stat-metric-body">
+            <span class="stat-number-lg counter" data-target="2">0</span>
+            <span class="stat-label-lg">PRODUCTION AI APPS</span>
           </div>
         </div>
 
-        <div class="bento-card stat-card span-3">
-          <div class="card-body stat-body">
-            <div class="stat-number">&lt; 2m</div>
-            <div class="stat-label">SUPPLY CHAIN RESOLUTION SLA</div>
+        <div class="bento-glass-card stat-metric-card col-span-3">
+          <div class="stat-metric-body">
+            <span class="stat-number-lg">&lt; 2m</span>
+            <span class="stat-label-lg">SUPPLY CHAIN RESOLUTION SLA</span>
           </div>
         </div>
 
-        <div class="bento-card stat-card span-3">
-          <div class="card-body stat-body">
-            <div class="stat-number">90%</div>
-            <div class="stat-label">WORKFLOW TIME REDUCTION</div>
+        <div class="bento-glass-card stat-metric-card col-span-3">
+          <div class="stat-metric-body">
+            <span class="stat-number-lg">90%</span>
+            <span class="stat-label-lg">MANUAL TIME REDUCTION</span>
           </div>
         </div>
 
-        <div class="bento-card stat-card span-3">
-          <div class="card-body stat-body">
-            <div class="stat-number"><span class="counter" data-target="4">0</span></div>
-            <div class="stat-label">PROFESSIONAL CERTIFICATIONS</div>
+        <div class="bento-glass-card stat-metric-card col-span-3">
+          <div class="stat-metric-body">
+            <span class="stat-number-lg counter" data-target="4">0</span>
+            <span class="stat-label-lg">VERIFIED CERTIFICATIONS</span>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Contact Info Line -->
-  <div class="contact-details-bar">
-    <span>EMAIL: ks1445674@gmail.com</span>
-    <span>PHONE: +91 9953870953</span>
-    <span>CODOLIO: krishnx</span>
-    <span>LEETCODE: krishnxsharmx</span>
-    <span>GITHUB: itsksfit</span>
-    <span>LINKEDIN: in/krishnasharmx</span>
-    <span>LOC: DELHI, INDIA</span>
+  <!-- Contact Bar -->
+  <div class="quick-contact-bar">
+    <div class="contact-pill-item"><span class="label">EMAIL:</span> <a href="mailto:ks1445674@gmail.com">ks1445674@gmail.com</a></div>
+    <div class="contact-pill-item"><span class="label">PHONE:</span> <a href="tel:+919953870953">+91 9953870953</a></div>
+    <div class="contact-pill-item"><span class="label">CODOLIO:</span> <a href="https://codolio.com/profile/krishnx" target="_blank" rel="noopener">krishnx</a></div>
+    <div class="contact-pill-item"><span class="label">LEETCODE:</span> <a href="https://leetcode.com/u/krishnxsharmx/" target="_blank" rel="noopener">krishnxsharmx</a></div>
+    <div class="contact-pill-item"><span class="label">GITHUB:</span> <a href="https://github.com/itsksfit" target="_blank" rel="noopener">itsksfit</a></div>
+    <div class="contact-pill-item"><span class="label">LINKEDIN:</span> <a href="https://www.linkedin.com/in/krishnasharmx/" target="_blank" rel="noopener">in/krishnasharmx</a></div>
+    <div class="contact-pill-item"><span class="label">LOCATION:</span> <span>Delhi, India</span></div>
   </div>
 
-  <!-- INFINITE MARQUEE BANNER -->
-  <footer class="marquee-footer">
+  <!-- Infinite Marquee Footer -->
+  <footer class="footer-marquee">
     <div class="marquee-track">
-      <div class="marquee-content">
-        NEXT.JS &bull; SAP S/4HANA &bull; FASTAPI &bull; PYTHON &bull; C++ &bull; JAVA &bull; MOUSER API &bull; GROQ CLOUD &bull; CODOLIO &bull; LEETCODE &bull; GENERATIVE AI &bull; MULTI-AGENT PIPELINES &bull; RAG &bull; THREE.JS &bull; REACT &bull; TAILWIND CSS &bull; MONGODB &bull; MYSQL &bull; LINUX &bull; DOCKER &bull; NEXT.JS &bull; SAP S/4HANA &bull; FASTAPI &bull; PYTHON &bull; C++ &bull; JAVA &bull; MOUSER API &bull; GROQ CLOUD &bull; CODOLIO &bull; LEETCODE &bull; GENERATIVE AI &bull; MULTI-AGENT PIPELINES &bull; RAG &bull; THREE.JS &bull; REACT &bull; TAILWIND CSS &bull; MONGODB &bull; MYSQL &bull; LINUX &bull; DOCKER &bull;
+      <div class="marquee-text">
+        NEXT.JS &bull; SAP S/4HANA &bull; FASTAPI &bull; PYTHON &bull; C++ &bull; JAVA &bull; MOUSER API &bull; GROQ CLOUD &bull; CODOLIO &bull; LEETCODE &bull; GENERATIVE AI &bull; MULTI-AGENT PIPELINES &bull; RAG &bull; THREE.JS &bull; REACT 19 &bull; TAILWIND CSS &bull; MONGODB &bull; MYSQL &bull; LINUX &bull; DOCKER &bull;
       </div>
-      <div class="marquee-content" aria-hidden="true">
-        NEXT.JS &bull; SAP S/4HANA &bull; FASTAPI &bull; PYTHON &bull; C++ &bull; JAVA &bull; MOUSER API &bull; GROQ CLOUD &bull; CODOLIO &bull; LEETCODE &bull; GENERATIVE AI &bull; MULTI-AGENT PIPELINES &bull; RAG &bull; THREE.JS &bull; REACT &bull; TAILWIND CSS &bull; MONGODB &bull; MYSQL &bull; LINUX &bull; DOCKER &bull; NEXT.JS &bull; SAP S/4HANA &bull; FASTAPI &bull; PYTHON &bull; C++ &bull; JAVA &bull; MOUSER API &bull; GROQ CLOUD &bull; CODOLIO &bull; LEETCODE &bull; GENERATIVE AI &bull; MULTI-AGENT PIPELINES &bull; RAG &bull; THREE.JS &bull; REACT &bull; TAILWIND CSS &bull; MONGODB &bull; MYSQL &bull; LINUX &bull; DOCKER &bull;
+      <div class="marquee-text" aria-hidden="true">
+        NEXT.JS &bull; SAP S/4HANA &bull; FASTAPI &bull; PYTHON &bull; C++ &bull; JAVA &bull; MOUSER API &bull; GROQ CLOUD &bull; CODOLIO &bull; LEETCODE &bull; GENERATIVE AI &bull; MULTI-AGENT PIPELINES &bull; RAG &bull; THREE.JS &bull; REACT 19 &bull; TAILWIND CSS &bull; MONGODB &bull; MYSQL &bull; LINUX &bull; DOCKER &bull;
       </div>
     </div>
   </footer>
 
-  <!-- NEO-BRUTALIST RESUME MODAL Overlay -->
-  <div class="resume-modal-overlay" id="resume-modal">
-    <div class="resume-modal-window">
-      <div class="modal-header">
-        <div class="header-dots">
-          <span class="dot red" id="close-resume-dot-red" style="cursor: pointer;"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
+  <!-- ========================================================================= -->
+  <!-- RESUME MODAL OVERLAY                                                      -->
+  <!-- ========================================================================= -->
+  <div class="modal-overlay" id="resume-modal">
+    <div class="modal-window resume-window">
+      <div class="modal-top-bar">
+        <div class="window-controls">
+          <span class="dot close" id="close-resume-dot"></span>
+          <span class="dot minimize"></span>
+          <span class="dot maximize"></span>
         </div>
-        <div class="header-title">krishna_sharma_resume.pdf</div>
-        <div style="display: flex; gap: 8px; align-items: center;">
-          <button class="resume-action-btn" id="print-resume-btn" title="Print / Save PDF">🖨️ PRINT / PDF</button>
-          <button class="close-modal-btn" id="close-resume-btn">&times;</button>
+        <span class="modal-window-title">krishna_sharma_resume.pdf</span>
+        <div class="modal-actions-group">
+          <button class="modal-action-btn" id="print-resume-btn" title="Print / Download PDF">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+            Print / Save PDF
+          </button>
+          <button class="modal-close-icon" id="close-resume-btn">&times;</button>
         </div>
       </div>
-      
-      <div class="resume-modal-body" id="resume-document">
-        <!-- Resume Document Header -->
+
+      <div class="modal-scroll-body" id="resume-document">
+        <!-- Resume Header -->
         <div class="res-header">
           <h1 class="res-name">KRISHNA SHARMA</h1>
-          <div class="res-contact-row">
+          <div class="res-contact-line">
             <a href="mailto:ks1445674@gmail.com">ks1445674@gmail.com</a>
             <span>&bull;</span>
             <a href="tel:+919953870953">+91 9953870953</a>
@@ -513,45 +661,45 @@
             <span>&bull;</span>
             <a href="https://itsksfit.github.io" target="_blank" rel="noopener">itsksfit.github.io</a>
           </div>
-          <div class="res-loc">Delhi, India</div>
+          <div class="res-location">Delhi, India</div>
         </div>
 
         <!-- Section: Summary -->
         <div class="res-section">
-          <h2 class="res-section-title">SUMMARY</h2>
-          <p class="res-text">
+          <h2 class="res-section-heading">SUMMARY</h2>
+          <p class="res-body-text">
             AI/ML undergraduate who has shipped two production-deployed, full-stack AI platforms (FastAPI + LLM APIs) that cut manual workflow time by up to 90%. Strong foundation in backend development, NLP, and Generative AI, with hands-on experience across the stack from API design to deployment. Former Club Head of the Cloud Computing Club at Galgotias Tech Council, growing technical community engagement by 40%+. Seeking SDE / AI/ML internship opportunities.
           </p>
         </div>
 
         <!-- Section: Education -->
         <div class="res-section">
-          <h2 class="res-section-title">EDUCATION</h2>
+          <h2 class="res-section-heading">EDUCATION</h2>
           <div class="res-item">
-            <div class="res-item-head">
+            <div class="res-item-header">
               <strong>Galgotias University</strong>, Greater Noida, Uttar Pradesh
-              <span class="res-date">2024 &ndash; 2028</span>
+              <span class="res-item-date">2024 &ndash; 2028</span>
             </div>
-            <div class="res-item-sub">B.Tech in Computer Science and Engineering (AI &amp; ML) | CGPA: 8.0</div>
+            <div class="res-item-sub">B.Tech in Computer Science and Engineering (AI &amp; ML) &bull; CGPA: 8.0</div>
           </div>
         </div>
 
         <!-- Section: Projects -->
         <div class="res-section">
-          <h2 class="res-section-title">PROJECTS</h2>
+          <h2 class="res-section-heading">PROJECTS</h2>
           
           <!-- Project 1 -->
           <div class="res-item">
-            <div class="res-item-head">
+            <div class="res-item-header">
               <strong>SentinelChain &ndash; Autonomous Supply Chain Resilience Platform</strong>
-              <span class="res-date">Jul &ndash; Aug 2026</span>
+              <span class="res-item-date">Jul &ndash; Aug 2026</span>
             </div>
-            <div class="res-tech-line">
+            <div class="res-tech-tagline">
               Next.js, React, Tailwind CSS, Three.js, Groq API, SAP S/4HANA, SAP Ariba, Mouser API, NewsAPI | 
               <a href="https://github.com/itsksfit/SentinelChain_SAP" target="_blank" rel="noopener">GitHub</a> &bull; 
               <a href="https://sentinelchain-gilt.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
             </div>
-            <ul class="res-bullets">
+            <ul class="res-bullet-list">
               <li>Architected a multi-agent GenAI pipeline (Detection, Impact, Match &amp; Chase, Execution) that autonomously detects semiconductor supply-chain disruptions and drafts procurement responses, compressing a 2-week manual resolution process to under 2 minutes.</li>
               <li>Connected SAP S/4HANA Cloud OData APIs to explode Bills of Materials in real time, calculating exact dollar-level revenue-at-risk (e.g., $14.2M/day exposure on a single disrupted line) across multiple plants and product lines.</li>
               <li>Built a live sourcing engine against the Mouser Electronics API with zero hardcoded data, enforcing enterprise guardrails (&plusmn;10% price ceiling, 95% evidence-confidence gate) before auto-generating SAP Ariba purchase requisitions.</li>
@@ -560,16 +708,16 @@
 
           <!-- Project 2 -->
           <div class="res-item">
-            <div class="res-item-head">
+            <div class="res-item-header">
               <strong>ContentFlow AI</strong>
-              <span class="res-date">Mar &ndash; May 2026</span>
+              <span class="res-item-date">Mar &ndash; May 2026</span>
             </div>
-            <div class="res-tech-line">
+            <div class="res-tech-tagline">
               Python, FastAPI, NLP, JavaScript, Reddit API, yt-dlp | 
               <a href="https://github.com/itsksfit/ContentFlow-AI" target="_blank" rel="noopener">GitHub</a> &bull; 
               <a href="https://content-flow-ai-lemon.vercel.app/" target="_blank" rel="noopener">Live Demo</a>
             </div>
-            <ul class="res-bullets">
+            <ul class="res-bullet-list">
               <li>Designed a 4-agent AI pipeline automating content discovery, trend validation, script generation, and viral hook creation using real-time Reddit and YouTube data, cutting manual research time by 90% and scripting effort by 85%.</li>
               <li>Built an NLP-powered Hinglish content generation engine with weighted engagement scoring and competitor analysis, improving content selection accuracy by 70% and generating creator-ready scripts in under 10 seconds.</li>
               <li>Built and deployed scalable REST APIs (FastAPI) with frontend/backend on Vercel and Render, removing dependency on external LLM APIs and cutting operational costs by 100%.</li>
@@ -579,123 +727,127 @@
 
         <!-- Section: Technical Skills -->
         <div class="res-section">
-          <h2 class="res-section-title">TECHNICAL SKILLS</h2>
-          <div class="res-skills-grid">
-            <div><strong>Languages:</strong> C++, Java, Python, JavaScript</div>
+          <h2 class="res-section-heading">TECHNICAL SKILLS</h2>
+          <div class="res-skills-layout">
+            <div><strong>Languages:</strong> C++, Java, Python, JavaScript, SQL, Shell</div>
             <div><strong>AI / ML:</strong> Generative AI, Machine Learning, NLP, Prompt Engineering, RAG, LangChain, Multi-Agent Systems</div>
-            <div><strong>Backend:</strong> FastAPI, Next.js, Django, REST APIs, API Integration, JDBC, Servlets, SAP S/4HANA OData, SAP Ariba</div>
-            <div><strong>Frontend:</strong> React, HTML5, CSS3, JavaScript, Tailwind CSS, Three.js</div>
+            <div><strong>Backend:</strong> FastAPI, Next.js, Django, REST APIs, SAP S/4HANA OData, SAP Ariba, Mouser Sourcing API, JDBC, Servlets</div>
+            <div><strong>Frontend:</strong> React 19, Tailwind CSS, Three.js, HTML5, CSS3</div>
             <div><strong>Databases:</strong> MongoDB, MySQL</div>
-            <div><strong>Tools &amp; Platforms:</strong> Git, GitHub, Linux, VS Code, Apache Tomcat, Vercel, Render, SolidWorks</div>
+            <div><strong>Tools &amp; Platforms:</strong> Git, GitHub, Linux, VS Code, Vercel, Render, Apache Tomcat, SolidWorks</div>
             <div><strong>CS Fundamentals:</strong> DSA, OOP, DBMS, Operating Systems, Computer Networks</div>
           </div>
         </div>
 
         <!-- Section: Certifications -->
         <div class="res-section">
-          <h2 class="res-section-title">CERTIFICATIONS</h2>
-          <ul class="res-bullets">
-            <li><strong>Oracle Database SQL</strong> &ndash; Oracle Academy <span class="res-date-inline">(Nov 2025)</span></li>
-            <li><strong>Programming with Java</strong> &ndash; GUVI (HCL) <span class="res-date-inline">(Aug 2025)</span></li>
-            <li><strong>Cloud Computing Fundamentals</strong> &ndash; Infosys Springboard <span class="res-date-inline">(Sep 2025)</span></li>
-            <li><strong>Design Thinking</strong> &ndash; NPTEL <span class="res-date-inline">(Jan 2026)</span></li>
+          <h2 class="res-section-heading">CERTIFICATIONS</h2>
+          <ul class="res-bullet-list">
+            <li><strong>Oracle Database SQL</strong> &ndash; Oracle Academy <span class="res-inline-date">(Nov 2025)</span></li>
+            <li><strong>Programming with Java</strong> &ndash; GUVI (HCL) <span class="res-inline-date">(Aug 2025)</span></li>
+            <li><strong>Cloud Computing Fundamentals</strong> &ndash; Infosys Springboard <span class="res-inline-date">(Sep 2025)</span></li>
+            <li><strong>Design Thinking</strong> &ndash; NPTEL <span class="res-inline-date">(Jan 2026)</span></li>
           </ul>
         </div>
 
         <!-- Section: Leadership & Achievements -->
         <div class="res-section">
-          <h2 class="res-section-title">LEADERSHIP &amp; ACHIEVEMENTS</h2>
-          <ul class="res-bullets">
+          <h2 class="res-section-heading">LEADERSHIP &amp; ACHIEVEMENTS</h2>
+          <ul class="res-bullet-list">
             <li><strong>Former Club Head, Cloud Computing Club &ndash; Galgotias Tech Council:</strong> drove 40%+ growth in technical community engagement through cloud workshops and open-source bootcamps.</li>
             <li><strong>Infrastructure Optimization:</strong> engineered zero-cost local LLM deployment pipelines for active full-stack applications.</li>
-            <li><strong>Open Source &amp; Problem Solving:</strong> maintained an active, production-backed GitHub footprint alongside consistent algorithmic practice on LeetCode.</li>
+            <li><strong>Open Source &amp; Problem Solving:</strong> maintained an active, production-backed GitHub footprint alongside consistent algorithmic practice on LeetCode and Codolio.</li>
           </ul>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- NEO-BRUTALIST CONTACT MODAL Overlay -->
-  <div class="contact-modal-overlay" id="contact-modal">
-    <div class="contact-modal-window">
-      <div class="modal-header" style="display: flex; align-items: center; justify-content: space-between; padding: 10px 16px;">
-        <div class="header-dots" style="margin: 0;">
-          <span class="dot red" id="close-modal-dot-red" style="cursor: pointer;"></span>
-          <span class="dot yellow"></span>
-          <span class="dot green"></span>
+  <!-- ========================================================================= -->
+  <!-- CONTACT MODAL OVERLAY                                                     -->
+  <!-- ========================================================================= -->
+  <div class="modal-overlay" id="contact-modal">
+    <div class="modal-window contact-window">
+      <div class="modal-top-bar">
+        <div class="window-controls">
+          <span class="dot close" id="close-contact-dot"></span>
+          <span class="dot minimize"></span>
+          <span class="dot maximize"></span>
         </div>
-        <div class="header-title" style="margin-left: 10px;">contact_session.sh</div>
-        <button class="close-modal-btn" id="close-modal-btn">&times;</button>
+        <span class="modal-window-title">connect_session.sh</span>
+        <button class="modal-close-icon" id="close-contact-btn">&times;</button>
       </div>
-      <div class="modal-body">
-        <h2 class="modal-title">INBOUND CONNECTION PROMPT</h2>
-        <p class="modal-subtitle">Choose a transmission protocol to get in touch.</p>
-        
-        <div class="modal-protocols">
-          <!-- Protocol 1: Quick Copy Email -->
-          <div class="protocol-card" id="btn-copy-email">
-            <span class="protocol-icon">✉️</span>
-            <div class="protocol-info">
-              <span class="protocol-lbl">EMAIL</span>
-              <span class="protocol-val">ks1445674@gmail.com</span>
+      
+      <div class="contact-modal-body">
+        <h2 class="contact-title">Let's Build Something Exceptional</h2>
+        <p class="contact-sub">Available for SDE / AI internships, open-source collaborations, and tech opportunities.</p>
+
+        <div class="contact-options-grid">
+          <!-- Option 1: Email Copy -->
+          <div class="contact-option-card" id="btn-copy-email">
+            <div class="opt-icon">✉️</div>
+            <div class="opt-details">
+              <span class="opt-label">DIRECT EMAIL</span>
+              <span class="opt-value">ks1445674@gmail.com</span>
             </div>
-            <span class="protocol-action" id="copy-action-lbl">COPY</span>
+            <span class="opt-action-badge" id="copy-action-lbl">Copy</span>
           </div>
 
-          <!-- Protocol 2: Call Direct -->
-          <a href="tel:+919953870953" class="protocol-card">
-            <span class="protocol-icon">📞</span>
-            <div class="protocol-info">
-              <span class="protocol-lbl">TELEPHONY</span>
-              <span class="protocol-val">+91 9953870953</span>
+          <!-- Option 2: Phone -->
+          <a href="tel:+919953870953" class="contact-option-card">
+            <div class="opt-icon">📞</div>
+            <div class="opt-details">
+              <span class="opt-label">TELEPHONE</span>
+              <span class="opt-value">+91 9953870953</span>
             </div>
-            <span class="protocol-action">CALL</span>
+            <span class="opt-action-badge">Call</span>
           </a>
 
-          <!-- Protocol 3: Codolio Profile -->
-          <a href="https://codolio.com/profile/krishnx" target="_blank" rel="noopener" class="protocol-card">
-            <span class="protocol-icon">⚡</span>
-            <div class="protocol-info">
-              <span class="protocol-lbl">CODOLIO</span>
-              <span class="protocol-val">codolio.com/profile/krishnx</span>
+          <!-- Option 3: Codolio -->
+          <a href="https://codolio.com/profile/krishnx" target="_blank" rel="noopener" class="contact-option-card">
+            <div class="opt-icon">⚡</div>
+            <div class="opt-details">
+              <span class="opt-label">CODOLIO PROFILE</span>
+              <span class="opt-value">codolio.com/profile/krishnx</span>
             </div>
-            <span class="protocol-action">EXPLORE</span>
+            <span class="opt-action-badge">View</span>
           </a>
 
-          <!-- Protocol 4: LinkedIn Connect -->
-          <a href="https://www.linkedin.com/in/krishnasharmx/" target="_blank" rel="noopener" class="protocol-card">
-            <span class="protocol-icon">🔗</span>
-            <div class="protocol-info">
-              <span class="protocol-lbl">LINKEDIN</span>
-              <span class="protocol-val">in/krishnasharmx</span>
+          <!-- Option 4: LinkedIn -->
+          <a href="https://www.linkedin.com/in/krishnasharmx/" target="_blank" rel="noopener" class="contact-option-card">
+            <div class="opt-icon">🔗</div>
+            <div class="opt-details">
+              <span class="opt-label">LINKEDIN</span>
+              <span class="opt-value">in/krishnasharmx</span>
             </div>
-            <span class="protocol-action">CONNECT</span>
+            <span class="opt-action-badge">Connect</span>
           </a>
 
-          <!-- Protocol 5: GitHub Profile -->
-          <a href="https://github.com/itsksfit" target="_blank" rel="noopener" class="protocol-card">
-            <span class="protocol-icon">💻</span>
-            <div class="protocol-info">
-              <span class="protocol-lbl">GITHUB</span>
-              <span class="protocol-val">github.com/itsksfit</span>
+          <!-- Option 5: GitHub -->
+          <a href="https://github.com/itsksfit" target="_blank" rel="noopener" class="contact-option-card">
+            <div class="opt-icon">💻</div>
+            <div class="opt-details">
+              <span class="opt-label">GITHUB</span>
+              <span class="opt-value">github.com/itsksfit</span>
             </div>
-            <span class="protocol-action">VISIT</span>
+            <span class="opt-action-badge">Follow</span>
           </a>
 
-          <!-- Protocol 6: LeetCode -->
-          <a href="https://leetcode.com/u/krishnxsharmx/" target="_blank" rel="noopener" class="protocol-card">
-            <span class="protocol-icon">🧠</span>
-            <div class="protocol-info">
-              <span class="protocol-lbl">LEETCODE</span>
-              <span class="protocol-val">krishnxsharmx</span>
+          <!-- Option 6: LeetCode -->
+          <a href="https://leetcode.com/u/krishnxsharmx/" target="_blank" rel="noopener" class="contact-option-card">
+            <div class="opt-icon">🧠</div>
+            <div class="opt-details">
+              <span class="opt-label">LEETCODE</span>
+              <span class="opt-value">krishnxsharmx</span>
             </div>
-            <span class="protocol-action">SOLVE</span>
+            <span class="opt-action-badge">Explore</span>
           </a>
         </div>
       </div>
     </div>
   </div>
 
-  <script src="app.js?v=2.0"></script>
+  <script src="app.js?v=3.0"></script>
 </body>
 </html>
+

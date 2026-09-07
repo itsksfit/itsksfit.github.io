@@ -408,10 +408,9 @@ function initSystemTabs() {
 // Resume Modal Initialization and Handlers
 function initResumeModal() {
   const modal = document.getElementById("resume-modal");
-  const heroBtn = document.getElementById("hero-resume-btn");
-  const navBtn = document.getElementById("nav-resume-btn");
+  const triggers = document.querySelectorAll(".resume-btn-trigger");
   const closeBtn = document.getElementById("close-resume-btn");
-  const closeDotRed = document.getElementById("close-resume-dot-red");
+  const closeDot = document.getElementById("close-resume-dot");
   const printBtn = document.getElementById("print-resume-btn");
 
   if (!modal) return;
@@ -426,10 +425,9 @@ function initResumeModal() {
     document.body.style.overflow = "";
   };
 
-  if (heroBtn) heroBtn.addEventListener("click", openResume);
-  if (navBtn) navBtn.addEventListener("click", openResume);
+  triggers.forEach(btn => btn.addEventListener("click", openResume));
   if (closeBtn) closeBtn.addEventListener("click", closeResume);
-  if (closeDotRed) closeDotRed.addEventListener("click", closeResume);
+  if (closeDot) closeDot.addEventListener("click", closeResume);
 
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
@@ -455,32 +453,39 @@ function initResumeModal() {
 // Contact Modal Initialization and Handlers
 function initContactModal() {
   const modal = document.getElementById("contact-modal");
-  const closeBtn = document.getElementById("close-modal-btn");
-  const closeDotRed = document.getElementById("close-modal-dot-red");
+  const navTrigger = document.getElementById("contact-trigger-btn");
+  const closeBtn = document.getElementById("close-contact-btn");
+  const closeDot = document.getElementById("close-contact-dot");
   const copyBtn = document.getElementById("btn-copy-email");
   const copyLbl = document.getElementById("copy-action-lbl");
 
   if (!modal) return;
 
-  // Intercept all mailto links
-  document.querySelectorAll('a[href^="mailto:ks1445674"]').forEach(btn => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      modal.classList.add("active");
-    });
-  });
-
-  const closeModal = () => {
-    modal.classList.remove("active");
+  const openContact = (e) => {
+    if (e) e.preventDefault();
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
   };
 
-  if (closeBtn) closeBtn.addEventListener("click", closeModal);
-  if (closeDotRed) closeDotRed.addEventListener("click", closeModal);
+  const closeContact = () => {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  };
+
+  if (navTrigger) navTrigger.addEventListener("click", openContact);
+  
+  // Intercept all mailto links
+  document.querySelectorAll('a[href^="mailto:ks1445674"], .mail-trigger').forEach(btn => {
+    btn.addEventListener("click", openContact);
+  });
+
+  if (closeBtn) closeBtn.addEventListener("click", closeContact);
+  if (closeDot) closeDot.addEventListener("click", closeContact);
 
   // Close modal when clicking outside the window
   modal.addEventListener("click", (e) => {
     if (e.target === modal) {
-      closeModal();
+      closeContact();
     }
   });
 
@@ -489,18 +494,38 @@ function initContactModal() {
     copyBtn.addEventListener("click", () => {
       navigator.clipboard.writeText("ks1445674@gmail.com").then(() => {
         copyLbl.textContent = "COPIED ✔";
-        copyLbl.style.color = "#22c55e";
-        copyLbl.style.borderColor = "#22c55e";
+        copyLbl.style.color = "#10b981";
+        copyLbl.style.borderColor = "#10b981";
         setTimeout(() => {
-          copyLbl.textContent = "COPY";
-          copyLbl.style.color = "var(--accent-blue)";
-          copyLbl.style.borderColor = "var(--accent-blue)";
+          copyLbl.textContent = "Copy";
+          copyLbl.style.color = "var(--neon-cyan)";
+          copyLbl.style.borderColor = "rgba(0, 240, 255, 0.4)";
         }, 1500);
       }).catch(err => {
         console.error("Failed to copy text: ", err);
       });
     });
   }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      closeContact();
+    }
+  });
+}
+
+// Interactive Spotlight glow following cursor
+function initCardSpotlight() {
+  const cards = document.querySelectorAll(".bento-glass-card");
+  cards.forEach(card => {
+    card.addEventListener("mousemove", (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      card.style.setProperty("--mouse-x", `${x}px`);
+      card.style.setProperty("--mouse-y", `${y}px`);
+    });
+  });
 }
 
 // Bootstrap Portfolio
@@ -527,12 +552,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Initialize contact modal overlay
   initContactModal();
 
+  // Initialize Card Spotlight
+  initCardSpotlight();
+
   // Add click trigger on the stack card to redo typing
-  const stackCard = document.querySelector(".current-stack-card");
-  if (stackCard) {
-    stackCard.addEventListener("click", () => {
+  const codeCard = document.querySelector(".code-ide-card");
+  if (codeCard) {
+    codeCard.addEventListener("click", () => {
       startStackTyping();
     });
   }
 });
+
 
