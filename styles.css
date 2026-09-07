@@ -353,6 +353,38 @@ body {
   flex-direction: column;
 }
 
+.hero-eyebrow-mono {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: #0066ff;
+  letter-spacing: 0.05em;
+  margin-bottom: 14px;
+}
+
+.hero-name-stacked {
+  font-family: var(--font-display);
+  font-size: clamp(3.8rem, 7vw, 5.8rem);
+  font-weight: 900;
+  line-height: 0.92;
+  color: #ffffff;
+  letter-spacing: -0.03em;
+  margin-bottom: 24px;
+  text-transform: uppercase;
+}
+
+.hero-tagline-caps {
+  font-family: var(--font-sans);
+  font-size: 14.5px;
+  font-weight: 700;
+  color: #8b9bb4;
+  line-height: 1.55;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  max-width: 580px;
+  margin-bottom: 34px;
+}
+
 .hero-badge {
   display: inline-flex;
   align-items: center;
