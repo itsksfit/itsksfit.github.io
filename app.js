@@ -1,6 +1,6 @@
 // Krishna Sharma Portfolio Logic
 
-// Custom stack structure directly fetched from resume
+// Custom stack structure directly fetched from resume and active projects
 const STACK_CODE = `const engineer = {
   name: "Krishna Sharma",
   education: "B.Tech CSE (AI & ML) - Galgotias University",
@@ -11,41 +11,58 @@ const STACK_CODE = `const engineer = {
   languages: [
     "C++", 
     "Java", 
-    "Python"
+    "Python", 
+    "TypeScript", 
+    "JavaScript", 
+    "SQL", 
+    "Bash"
   ],
-  ai_ml: [
+  ai_ml_systems: [
     "Generative AI", 
-    "Machine Learning", 
+    "Multi-Agent Pipelines", 
     "NLP", 
-    "Prompt Engineering", 
+    "Machine Learning", 
     "RAG", 
-    "LangChain"
+    "Prompt Engineering", 
+    "LangChain", 
+    "Groq Cloud", 
+    "Local LLMs"
   ],
-  backend: [
+  backend_enterprise: [
     "FastAPI", 
     "Django", 
     "REST APIs", 
-    "API Integration", 
+    "SAP S/4HANA OData", 
+    "SAP Ariba", 
+    "Mouser API", 
+    "Reddit API", 
+    "NewsAPI", 
+    "yt-dlp", 
     "JDBC", 
     "Servlets"
   ],
-  frontend: [
-    "HTML", 
-    "CSS", 
+  frontend_3d: [
+    "Next.js", 
+    "React 19", 
+    "Tailwind CSS", 
+    "Three.js", 
+    "HTML5", 
+    "CSS3", 
     "JavaScript"
   ],
   databases: [
     "MongoDB", 
-    "MySQL"
+    "MySQL", 
+    "Oracle SQL"
   ],
-  tools_platforms: [
+  cloud_platforms: [
     "Git", 
     "GitHub", 
-    "Linux", 
-    "VS Code", 
-    "Apache Tomcat", 
+    "Linux / Shell", 
     "Vercel", 
     "Render", 
+    "VS Code", 
+    "Apache Tomcat", 
     "SolidWorks"
   ],
   cs_fundamentals: [
@@ -53,7 +70,8 @@ const STACK_CODE = `const engineer = {
     "OOP", 
     "DBMS", 
     "Operating Systems", 
-    "Computer Networks"
+    "Computer Networks", 
+    "System Architecture"
   ]
 };
 
