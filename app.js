@@ -443,8 +443,19 @@ function initResumeModal() {
 
   // Print/Download action
   if (printBtn) {
-    printBtn.addEventListener("click", () => {
-      window.print();
+    printBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      const iframe = document.querySelector(".resume-pdf-iframe");
+      if (iframe && iframe.contentWindow) {
+        try {
+          iframe.contentWindow.focus();
+          iframe.contentWindow.print();
+          return;
+        } catch (err) {
+          console.warn("Direct iframe print failed, opening PDF:", err);
+        }
+      }
+      window.open("resume.pdf", "_blank");
     });
   }
 

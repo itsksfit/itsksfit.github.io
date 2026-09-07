@@ -1550,14 +1550,43 @@ body {
 }
 
 .resume-window {
-  max-width: 900px;
+  max-width: 960px;
+  width: 95vw;
+  height: 90vh;
   max-height: 92vh;
   display: flex;
   flex-direction: column;
 }
 
-.modal-overlay.active .modal-window {
-  transform: scale(1);
+.resume-pdf-container {
+  flex: 1;
+  width: 100%;
+  height: calc(100% - 48px);
+  background: #0e111a;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-pdf-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  background: #ffffff;
+  display: block;
+}
+
+.pdf-fallback-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 40px;
+  text-align: center;
+  color: var(--text-sub);
+  gap: 16px;
+  background: #0c0e17;
 }
 
 .modal-top-bar {
