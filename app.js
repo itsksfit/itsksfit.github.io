@@ -1,56 +1,59 @@
 // Krishna Sharma Portfolio Logic
 
-// Custom stack structure based on resume
+// Custom stack structure directly fetched from resume
 const STACK_CODE = `const engineer = {
   name: "Krishna Sharma",
-  focus: "Autonomous AI Systems & Full-Stack Platforms",
-  education: "B.Tech CSE (AI & ML)",
-  university: "Galgotias University (CGPA: 8.0)",
-  role: "Former Cloud Computing Club Head",
+  education: "B.Tech CSE (AI & ML) - Galgotias University",
+  cgpa: 8.0,
+  role: "Former Head, Cloud Computing Club",
   location: "Delhi, India",
   
   languages: [
-    "Python", 
     "C++", 
     "Java", 
-    "JavaScript"
+    "Python"
   ],
   ai_ml: [
     "Generative AI", 
-    "Multi-Agent Systems",
-    "NLP & LLMs", 
-    "RAG Pipelines", 
+    "Machine Learning", 
+    "NLP", 
     "Prompt Engineering", 
+    "RAG", 
     "LangChain"
   ],
-  backend_cloud: [
+  backend: [
     "FastAPI", 
-    "Next.js (App/Pages)", 
     "Django", 
     "REST APIs", 
-    "SAP S/4HANA OData", 
-    "SAP Ariba PR", 
-    "Mouser API"
+    "API Integration", 
+    "JDBC", 
+    "Servlets"
   ],
-  frontend_ui: [
-    "React 19", 
-    "Tailwind CSS", 
-    "Three.js / Globe.gl", 
-    "HTML5", 
-    "CSS3"
+  frontend: [
+    "HTML", 
+    "CSS", 
+    "JavaScript"
   ],
   databases: [
     "MongoDB", 
     "MySQL"
   ],
-  tools_infra: [
+  tools_platforms: [
     "Git", 
     "GitHub", 
     "Linux", 
     "VS Code", 
+    "Apache Tomcat", 
     "Vercel", 
     "Render", 
-    "Apache Tomcat"
+    "SolidWorks"
+  ],
+  cs_fundamentals: [
+    "DSA", 
+    "OOP", 
+    "DBMS", 
+    "Operating Systems", 
+    "Computer Networks"
   ]
 };
 
