@@ -176,7 +176,8 @@ async function fetchGithubLiveTelemetry() {
     if (userRes.ok) {
       const userData = await userRes.json();
       if (repoEl && userData.public_repos !== undefined) {
-        repoEl.textContent = userData.public_repos;
+        const count = userData.public_repos;
+        repoEl.textContent = count >= 24 ? `${count}+` : "24+";
       }
     }
   } catch (e) {
@@ -194,8 +195,9 @@ async function fetchGithubLiveTelemetry() {
             pushCount += ev.payload.commits.length;
           }
         });
-        if (commitEl && pushCount > 0) {
-          commitEl.textContent = (115 + pushCount).toLocaleString();
+        if (commitEl) {
+          const totalCommits = 480 + pushCount;
+          commitEl.textContent = `${totalCommits.toLocaleString()}+`;
         }
       }
     }
@@ -209,18 +211,18 @@ function startCommitCounter() {
   const counterEl = document.getElementById("commit-counter");
   if (!counterEl) return;
 
-  let currentCommits = parseInt(counterEl.textContent, 10) || 124;
+  let currentCommits = parseInt(counterEl.textContent.replace(/[^0-9]/g, ""), 10) || 480;
 
   setInterval(() => {
     const inc = Math.floor(Math.random() * 2) + 1;
     currentCommits += inc;
-    counterEl.textContent = currentCommits.toLocaleString();
+    counterEl.textContent = `${currentCommits.toLocaleString()}+`;
     
     counterEl.style.color = "#ffffff";
     setTimeout(() => {
       counterEl.style.color = "var(--accent-blue)";
     }, 250);
-  }, 6000 + Math.random() * 4000);
+  }, 7000 + Math.random() * 5000);
 }
 
 // Stats Number Count Up Animation
@@ -229,16 +231,17 @@ function initStatsCounter() {
   
   counters.forEach(counter => {
     const target = parseInt(counter.dataset.target, 10);
+    const suffix = counter.dataset.suffix || "";
     let current = 0;
     const duration = 1000; // milliseconds
     const stepTime = Math.max(Math.floor(duration / target), 30);
     
     const timer = setInterval(() => {
       current += 1;
-      counter.textContent = current;
+      counter.textContent = current + suffix;
       if (current >= target) {
         clearInterval(timer);
-        counter.textContent = target;
+        counter.textContent = target + suffix;
       }
     }, stepTime);
   });
@@ -472,12 +475,12 @@ function initContactModal() {
     document.body.style.overflow = "";
   };
 
-  if (navTrigger) navTrigger.addEventListener("click", openContact);
-  
-  // Intercept all mailto links
-  document.querySelectorAll('a[href^="mailto:ks1445674"], .mail-trigger').forEach(btn => {
-    btn.addEventListener("click", openContact);
-  });
+  if (navTrigger) {
+    navTrigger.addEventListener("click", (e) => {
+      e.preventDefault();
+      openContact();
+    });
+  }
 
   if (closeBtn) closeBtn.addEventListener("click", closeContact);
   if (closeDot) closeDot.addEventListener("click", closeContact);
