@@ -3,11 +3,11 @@
 // Custom stack structure based on resume
 const STACK_CODE = `const engineer = {
   name: "Krishna Sharma",
-  focus: "AI/ML & Backend Systems",
+  focus: "Autonomous AI Systems & Full-Stack Platforms",
   education: "B.Tech CSE (AI & ML)",
   university: "Galgotias University (CGPA: 8.0)",
-  role: "Cloud Computing Club Head",
-  creator: "Lifestyle & Fun Content Creator",
+  role: "Former Cloud Computing Club Head",
+  location: "Delhi, India",
   
   languages: [
     "Python", 
@@ -16,56 +16,83 @@ const STACK_CODE = `const engineer = {
     "JavaScript"
   ],
   ai_ml: [
-    "Machine Learning", 
-    "NLP", 
     "Generative AI", 
-    "RAG", 
-    "LangGraph", 
-    "Prompt Engineering"
+    "Multi-Agent Systems",
+    "NLP & LLMs", 
+    "RAG Pipelines", 
+    "Prompt Engineering", 
+    "LangChain"
   ],
-  frameworks: [
+  backend_cloud: [
     "FastAPI", 
-    "LangChain", 
-    "NumPy", 
-    "Pandas", 
-    "Matplotlib"
+    "Next.js (App/Pages)", 
+    "Django", 
+    "REST APIs", 
+    "SAP S/4HANA OData", 
+    "SAP Ariba PR", 
+    "Mouser API"
+  ],
+  frontend_ui: [
+    "React 19", 
+    "Tailwind CSS", 
+    "Three.js / Globe.gl", 
+    "HTML5", 
+    "CSS3"
   ],
   databases: [
-    "MySQL", 
-    "MongoDB"
+    "MongoDB", 
+    "MySQL"
   ],
-  dev_tools: [
+  tools_infra: [
     "Git", 
     "GitHub", 
     "Linux", 
     "VS Code", 
-    "Tomcat"
+    "Vercel", 
+    "Render", 
+    "Apache Tomcat"
   ]
 };
 
 // Initiate validation sequence
-console.log("Telemetry systems: NOMINAL");`;
+console.log("Telemetry systems: NOMINAL. Ready for production.");`;
 
-// Highlight syntax rules for bento code block
-function highlightBentoCode(text) {
-  let escaped = text
+function escapeHtml(str) {
+  return str
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
+}
 
-  // Highlight Comments
-  escaped = escaped.replace(/(\/\/.*)/g, '<span class="syntax-comment">$1</span>');
-  
-  // Highlight Strings
-  escaped = escaped.replace(/("(?:\\.|[^"\\])*")/g, '<span class="syntax-string">$1</span>');
-  
-  // Highlight Keywords
-  escaped = escaped.replace(/\b(const|let|var|function|return|import|export|class)\b/g, '<span class="syntax-keyword">$1</span>');
-  
-  // Highlight Objects/Keys
-  escaped = escaped.replace(/\b([a-zA-Z_][a-zA-Z0-9_]*)(?=\s*:)/g, '<span class="syntax-var">$1</span>');
+// Highlight syntax rules cleanly in a single pass
+function highlightBentoCode(code) {
+  const regex = /(\/\/[^\n]*)|("(?:\\.|[^"\\])*")|(\b(?:const|let|var|function|return|import|export|class)\b)|([a-zA-Z_$][a-zA-Z0-9_$]*)(?=\s*:)|(\b\d+(?:\.\d+)?\b)|(\s+)|([^"a-zA-Z0-9_\s]+)|([a-zA-Z_$][a-zA-Z0-9_$]*)/g;
 
-  return escaped;
+  let result = "";
+  let match;
+  while ((match = regex.exec(code)) !== null) {
+    const [full, comment, str, keyword, prop, num, ws, punct, ident] = match;
+    if (comment !== undefined) {
+      result += `<span class="syntax-comment">${escapeHtml(comment)}</span>`;
+    } else if (str !== undefined) {
+      result += `<span class="syntax-string">${escapeHtml(str)}</span>`;
+    } else if (keyword !== undefined) {
+      result += `<span class="syntax-keyword">${escapeHtml(keyword)}</span>`;
+    } else if (prop !== undefined) {
+      result += `<span class="syntax-var">${escapeHtml(prop)}</span>`;
+    } else if (num !== undefined) {
+      result += `<span class="syntax-num">${escapeHtml(num)}</span>`;
+    } else if (ws !== undefined) {
+      result += ws;
+    } else if (punct !== undefined) {
+      result += escapeHtml(punct);
+    } else if (ident !== undefined) {
+      result += escapeHtml(ident);
+    } else {
+      result += escapeHtml(full);
+    }
+  }
+  return result;
 }
 
 // Typing engine for stack card
@@ -91,9 +118,9 @@ function startStackTyping() {
     }
     
     buffer += STACK_CODE[i];
-    codeContainer.innerHTML = buffer.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;") + '<span class="typing-cursor"></span>';
+    codeContainer.innerHTML = escapeHtml(buffer) + '<span class="typing-cursor"></span>';
     i++;
-  }, 8);
+  }, 6);
 }
 
 // Populate and animate GitHub Commit Matrix Grid
@@ -102,7 +129,7 @@ function initGithubCommitGrid() {
   if (!grid) return;
 
   grid.innerHTML = "";
-  const totalBlocks = 72; // 18 columns * 4 rows
+  const totalBlocks = 84; // 21 columns * 4 rows
   const blocks = [];
 
   // Generate blocks with initial commit distributions
@@ -113,10 +140,10 @@ function initGithubCommitGrid() {
     // Weighted distribution
     const rand = Math.random();
     let level = 0;
-    if (rand > 0.45 && rand <= 0.75) level = 1;
-    else if (rand > 0.75 && rand <= 0.90) level = 2;
-    else if (rand > 0.90 && rand <= 0.97) level = 3;
-    else if (rand > 0.97) level = 4;
+    if (rand > 0.40 && rand <= 0.70) level = 1;
+    else if (rand > 0.70 && rand <= 0.88) level = 2;
+    else if (rand > 0.88 && rand <= 0.96) level = 3;
+    else if (rand > 0.96) level = 4;
 
     block.classList.add(`level-${level}`);
     grid.appendChild(block);
@@ -125,8 +152,7 @@ function initGithubCommitGrid() {
 
   // Periodic Git telemetry highlight simulation
   setInterval(() => {
-    // Select 3 random blocks to flash/increase activity
-    for (let k = 0; k < 3; k++) {
+    for (let k = 0; k < 4; k++) {
       const idx = Math.floor(Math.random() * totalBlocks);
       const block = blocks[idx];
       if (!block) continue;
@@ -137,7 +163,45 @@ function initGithubCommitGrid() {
         block.element.className = `commit-block level-${block.baseLevel}`;
       }, 1000 + Math.random() * 2000);
     }
-  }, 4000);
+  }, 3500);
+}
+
+// Fetch live GitHub telemetry
+async function fetchGithubLiveTelemetry() {
+  const repoEl = document.getElementById("active-repos-val");
+  const commitEl = document.getElementById("commit-counter");
+  
+  try {
+    const userRes = await fetch("https://api.github.com/users/itsksfit");
+    if (userRes.ok) {
+      const userData = await userRes.json();
+      if (repoEl && userData.public_repos !== undefined) {
+        repoEl.textContent = userData.public_repos;
+      }
+    }
+  } catch (e) {
+    console.log("GitHub profile telemetry using default:", e);
+  }
+
+  try {
+    const eventsRes = await fetch("https://api.github.com/users/itsksfit/events?per_page=100");
+    if (eventsRes.ok) {
+      const eventsData = await eventsRes.json();
+      let pushCount = 0;
+      if (Array.isArray(eventsData)) {
+        eventsData.forEach(ev => {
+          if (ev.type === "PushEvent" && ev.payload && ev.payload.commits) {
+            pushCount += ev.payload.commits.length;
+          }
+        });
+        if (commitEl && pushCount > 0) {
+          commitEl.textContent = (115 + pushCount).toLocaleString();
+        }
+      }
+    }
+  } catch (e) {
+    console.log("GitHub events using default:", e);
+  }
 }
 
 // Live Commit Counter Incrementer
@@ -145,11 +209,10 @@ function startCommitCounter() {
   const counterEl = document.getElementById("commit-counter");
   if (!counterEl) return;
 
-  let currentCommits = 95;
-  counterEl.textContent = currentCommits.toLocaleString();
+  let currentCommits = parseInt(counterEl.textContent, 10) || 124;
 
   setInterval(() => {
-    const inc = Math.floor(Math.random() * 3) + 1;
+    const inc = Math.floor(Math.random() * 2) + 1;
     currentCommits += inc;
     counterEl.textContent = currentCommits.toLocaleString();
     
@@ -157,7 +220,7 @@ function startCommitCounter() {
     setTimeout(() => {
       counterEl.style.color = "var(--accent-blue)";
     }, 250);
-  }, 5000 + Math.random() * 4000);
+  }, 6000 + Math.random() * 4000);
 }
 
 // Stats Number Count Up Animation
@@ -183,47 +246,51 @@ function initStatsCounter() {
 
 // Project Details & Interactive Simulation Engine
 const SYSTEM_PROJECTS = {
-  contentflow: {
-    title: "ContentFlow AI",
-    desc: "Built a 4-agent AI pipeline automating content research, validation, script generation, and viral hook creation via real-time Reddit & YouTube trend analysis. Integrates a Hinglish script builder.",
-    link: "https://content-flow-ai-lemon.vercel.app/",
-    tags: ["Python", "FastAPI", "NLP", "LangChain", "Reddit API", "yt-dlp"],
-    nodes: ["Researcher", "Validator", "Scriptwriter", "Optimizer"],
+  sentinelchain: {
+    title: "SentinelChain",
+    desc: "Autonomous B2B supply chain resilience platform. Detects semiconductor disruptions across global wafer fabs and automates SAP S/4HANA BOM explosion, real-time Mouser sourcing, and SAP Ariba purchase execution.",
+    link: "https://sentinelchain-gilt.vercel.app/",
+    repo: "https://github.com/itsksfit/SentinelChain_SAP",
+    tags: ["Next.js", "React 19", "SAP S/4HANA", "Mouser API", "Groq API", "Three.js", "Tailwind CSS"],
+    nodes: ["Detection", "Impact (SAP)", "Mouser Sourcing", "Execution (Ariba)"],
     stageMapping: [-1, 0, 0, 1, 1, 2, 2, 3, 3, 3],
     stages: [
-      "[*] Booting ContentFlow Agent Core...",
-      "[*] Agent 1 [Researcher]: Sweeping subreddits & youtube trending charts...",
-      "[*] Agent 1 [Researcher]: Discovered trend: \"Generative AI for local indexing\"",
-      "[*] Agent 2 [Validator]: Computing engagement validation scoring metrics...",
-      "[*] Agent 2 [Validator]: Score = 89/100 [CRITERION MET]",
-      "[*] Agent 3 [Scriptwriter]: Synthesizing Hinglish script outline...",
-      "[*] Agent 3 [Scriptwriter]: Structured 3 hook variants & transcript logs.",
-      "[*] Agent 4 [Optimizer]: Compiling viral hook parameters...",
-      "[*] Pipeline Success: Dispatching script file in under 0.8 seconds.",
-      "[*] Telemetry: 90% research cut / 85% script write effort saved."
+      "[*] Initializing SentinelChain telemetry ingestion daemon...",
+      "[*] Node 1 [Detection]: Scanning USGS seismic feed & US Federal Register EAR gazette...",
+      "[*] Node 1 [Detection]: Alert! M4.8 seismic anomaly detected near Hsinchu Fab Cluster.",
+      "[*] Node 2 [Impact]: Querying SAP S/4HANA Cloud OData (API_PRODUCT_SRV) for BOM explosion...",
+      "[*] Node 2 [Impact]: Exposed SKU: STM32F401RE | Daily revenue at risk: $14.2M/day.",
+      "[*] Node 3 [Sourcing]: Querying Mouser Electronics API for verified spot inventory...",
+      "[*] Node 3 [Sourcing]: Sourced 3,384 units @ $4.12/ea (enforcing +10% price ceiling guardrail).",
+      "[*] Node 4 [Execution]: Evidence confidence 98.4% >= 95% threshold gate passed.",
+      "[*] Node 4 [Execution]: Auto-generating SAP Ariba Purchase Requisition & Single-Page PDF Dossier.",
+      "[*] Resolution SLA: 2-week manual procurement triage compressed to 1.8 minutes."
     ]
   },
-  automarketer: {
-    title: "AutoMarketer AI",
-    desc: "Marketing automation engine that crawls website URLs, extracts brand themes, and generates captions and image prompts using LLaMA 3.3. Integrates FLUX.1 for image synthesis.",
-    link: "https://automarketer-ai.onrender.com/",
-    tags: ["Python", "FastAPI", "MongoDB", "Groq API", "FLUX.1", "BeautifulSoup"],
-    nodes: ["Scraper", "LLaMA 3.3", "Cache", "FLUX.1"],
-    stageMapping: [-1, 0, 0, 1, 2, 3, 3, 3],
+  contentflow: {
+    title: "ContentFlow AI",
+    desc: "4-agent AI pipeline automating content research, trend validation, Hinglish script generation, and viral hook creation using live Reddit & YouTube data with zero external LLM costs.",
+    link: "https://content-flow-ai-lemon.vercel.app/",
+    repo: "https://github.com/itsksfit/ContentFlow-AI",
+    tags: ["Python", "FastAPI", "NLP", "Reddit API", "yt-dlp", "Vercel", "Render"],
+    nodes: ["Scraper", "Validator", "Voice Writer", "Hook Gen"],
+    stageMapping: [-1, 0, 0, 1, 1, 2, 2, 3, 3, 3],
     stages: [
-      "[*] AutoMarketer AI initialization online.",
-      "[*] Scraper Engine: Fetching brand schema from target URL...",
-      "[*] Scraper Engine: Payload received, parsed tags successfully.",
-      "[*] LLaMA 3.3 (via Groq): Constructing brand messaging captions...",
-      "[*] Cache system check: Cache hit. Eliminating redundant API call.",
-      "[*] FLUX.1 (Hugging Face): Synthesizing AI-generated image prompt...",
-      "[*] Motor Async Driver: Logging campaign history in MongoDB Atlas...",
-      "[*] Campaign status: Deployed successfully. Metrics synced."
+      "[*] Initializing ContentFlow AI multi-agent pipeline...",
+      "[*] Agent 1 [Scraper]: Sweeping Reddit JSON API & yt-dlp Shorts trending stream...",
+      "[*] Agent 1 [Scraper]: Ingested 45 candidate creator posts across target niche.",
+      "[*] Agent 2 [Validator]: Computing weighted score (Views 40%, ER% 35%, Comments 25%)...",
+      "[*] Agent 2 [Validator]: Validated viral cluster with ER >= 5.8% [CRITERION MET].",
+      "[*] Agent 3 [Voice Writer]: Analyzing creator tone & Hinglish vocabulary distribution...",
+      "[*] Agent 3 [Voice Writer]: Synthesized 4-beat Hinglish script (Hook, Context, Value, Pro-Tip).",
+      "[*] Agent 4 [Hook Gen]: Matching 5 psychological hook frameworks with viral confidence...",
+      "[*] Best Match: 'The Secret Hack' (Score: 9.4/10). Script compiled in < 0.8s.",
+      "[*] Telemetry: 90% research cut, 85% scripting saved, 100% free deterministic engine."
     ]
   }
 };
 
-let currentSystem = "contentflow";
+let currentSystem = "sentinelchain";
 let systemInterval = null;
 
 function runSystemSimulation(sysKey) {
@@ -232,6 +299,7 @@ function runSystemSimulation(sysKey) {
   const descEl = document.getElementById("system-desc");
   const tagsEl = document.getElementById("system-tech-tags");
   const linkEl = document.getElementById("system-link");
+  const repoEl = document.getElementById("system-repo");
   const flowMapEl = document.getElementById("system-flow-map");
   
   if (!logsEl || !titleEl || !descEl || !tagsEl) return;
@@ -239,9 +307,12 @@ function runSystemSimulation(sysKey) {
   const sys = SYSTEM_PROJECTS[sysKey];
   currentSystem = sysKey;
 
-  // Update link if present
+  // Update demo and repo links
   if (linkEl && sys.link) {
     linkEl.href = sys.link;
+  }
+  if (repoEl && sys.repo) {
+    repoEl.href = sys.repo;
   }
 
   // Draw architectural nodes map dynamically
@@ -311,25 +382,74 @@ function runSystemSimulation(sysKey) {
 
 // Hook up project bento tabs
 function initSystemTabs() {
+  const btnSentinelchain = document.getElementById("tab-sentinelchain");
   const btnContentflow = document.getElementById("tab-contentflow");
-  const btnAutomarketer = document.getElementById("tab-automarketer");
 
-  if (!btnContentflow || !btnAutomarketer) return;
+  if (btnSentinelchain) {
+    btnSentinelchain.addEventListener("click", () => {
+      btnSentinelchain.classList.add("active");
+      if (btnContentflow) btnContentflow.classList.remove("active");
+      runSystemSimulation("sentinelchain");
+    });
+  }
 
-  btnContentflow.addEventListener("click", () => {
-    btnContentflow.classList.add("active");
-    btnAutomarketer.classList.remove("active");
-    runSystemSimulation("contentflow");
+  if (btnContentflow) {
+    btnContentflow.addEventListener("click", () => {
+      btnContentflow.classList.add("active");
+      if (btnSentinelchain) btnSentinelchain.classList.remove("active");
+      runSystemSimulation("contentflow");
+    });
+  }
+
+  // Start with default SentinelChain simulation
+  runSystemSimulation("sentinelchain");
+}
+
+// Resume Modal Initialization and Handlers
+function initResumeModal() {
+  const modal = document.getElementById("resume-modal");
+  const heroBtn = document.getElementById("hero-resume-btn");
+  const navBtn = document.getElementById("nav-resume-btn");
+  const closeBtn = document.getElementById("close-resume-btn");
+  const closeDotRed = document.getElementById("close-resume-dot-red");
+  const printBtn = document.getElementById("print-resume-btn");
+
+  if (!modal) return;
+
+  const openResume = () => {
+    modal.classList.add("active");
+    document.body.style.overflow = "hidden";
+  };
+
+  const closeResume = () => {
+    modal.classList.remove("active");
+    document.body.style.overflow = "";
+  };
+
+  if (heroBtn) heroBtn.addEventListener("click", openResume);
+  if (navBtn) navBtn.addEventListener("click", openResume);
+  if (closeBtn) closeBtn.addEventListener("click", closeResume);
+  if (closeDotRed) closeDotRed.addEventListener("click", closeResume);
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeResume();
+    }
   });
 
-  btnAutomarketer.addEventListener("click", () => {
-    btnAutomarketer.classList.add("active");
-    btnContentflow.classList.remove("active");
-    runSystemSimulation("automarketer");
-  });
+  // Print/Download action
+  if (printBtn) {
+    printBtn.addEventListener("click", () => {
+      window.print();
+    });
+  }
 
-  // Start with default ContentFlow AI simulation
-  runSystemSimulation("contentflow");
+  // Escape key to close
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && modal.classList.contains("active")) {
+      closeResume();
+    }
+  });
 }
 
 // Contact Modal Initialization and Handlers
@@ -390,6 +510,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Load and animate Github Grid
   initGithubCommitGrid();
+  // Fetch real-time live telemetry
+  fetchGithubLiveTelemetry();
   // Start telemetry counter ticks
   startCommitCounter();
 
@@ -398,6 +520,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize System simulation tabs
   initSystemTabs();
+
+  // Initialize resume modal
+  initResumeModal();
 
   // Initialize contact modal overlay
   initContactModal();
@@ -410,3 +535,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+

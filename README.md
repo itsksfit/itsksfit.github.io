@@ -8,13 +8,13 @@ A bold, high-contrast, premium dark-mode developer portfolio designed with a Neo
 
 ## ⚡ Visual & Interactive Features
 
-* **Neo-Brutalist Vibe**: Solid black backgrounds (`#0B0B0B`), custom neon-adjacent electric blue highlights (`#0055ff`), flat offsets (`box-shadow: 8px 8px 0px var(--accent-blue)`), and stark borders.
-* **Header Telemetry Navbar**: Responsive navigation tabs featuring a live status indicator (`SYSTEM: ACTIVE`).
+* **Neo-Brutalist Vibe**: Solid black backgrounds (`#08080A`), custom neon-adjacent electric blue highlights (`#0055ff`), flat offsets (`box-shadow: 8px 8px 0px var(--accent-blue)`), and stark borders.
+* **Header Telemetry Navbar & Resume Integration**: Responsive navigation tabs featuring a live status indicator (`SYSTEM: ACTIVE`) and instant access to a dedicated interactive **Resume Modal & Printable PDF**.
 * **Profile Cutout Header**: High-contrast, stylized portrait cutout that transitions from high-contrast grayscale to full natural color on hover.
-* **Skills IDE Simulator**: Active code editor card typing out a custom Javascript class listing languages, frameworks, creator credentials, and databases.
-* **Dynamic System logs**: Live terminal simulation tracking agent pipelines, coupled with an active **Architectural Node Map** highlighting data transfers (`RESEARCHER → VALIDATOR → SCRIPTWRITER → OPTIMIZER`) in real-time.
-* **GitHub Repository List**: Dynamically lists public repositories (`ContentFlow-AI`, `AutoMarketer-AI`, `Shell-Automation`, `Cloud_platform`) and displays your real public commit telemetry counts.
-* **Connection Protocol Modal**: Custom drawer intercepting mail tags to provide one-click clipboard copying, telephony dialing, and LinkedIn/Instagram redirects.
+* **Skills IDE Simulator**: Active code editor card typing out an engineering stack profile listing languages, AI/ML pipelines, backend architectures, and developer tooling.
+* **Dynamic System Logs & Multi-Agent Telemetry**: Live terminal simulation tracking agent pipelines, coupled with an active **Architectural Node Map** highlighting data transfers for **SentinelChain** (`DETECTION → IMPACT → SOURCING → EXECUTION`) and **ContentFlow AI** (`SCRAPER → VALIDATOR → VOICE WRITER → HOOK GEN`) in real-time.
+* **GitHub Repository List**: Highlights production repositories (`SentinelChain_SAP`, `ContentFlow-AI`, `Shell-Automation`, `Cloud_platform`) and displays live commit telemetry counts.
+* **Connection Protocol Modal**: Custom drawer intercepting contact actions to provide one-click clipboard copying, telephony dialing, and LinkedIn/GitHub redirects.
 * **Competencies Ticker**: Infinite scrolling horizontal marquee scrolling across the footer.
 
 ---
